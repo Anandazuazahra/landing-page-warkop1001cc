@@ -1,119 +1,297 @@
 import React from 'react';
-import { Coffee, Flame, Heart, Sparkles, Navigation } from 'lucide-react';
+import { Coffee, Heart, Clock, MapPin, Sparkles, Users, Award } from 'lucide-react';
+import warkopPhotoImg from '../assets/warkop_photo.jpg';
 
 export default function AboutWarkop() {
   return (
     <div className="animate-fade-up">
-      {/* Intro Hero Section */}
-      <section className="section" style={{ paddingBottom: '40px' }}>
+      <section className="section" style={{ paddingTop: '60px', paddingBottom: '80px' }}>
         <div className="wrap">
-          <div className="section-head">
-            <div className="eyebrow">Tentang Kami</div>
-            <div className="steaming-mug-container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '80px', margin: '20px 0', position: 'relative' }}>
-              <div className="steam-wrapper" style={{ display: 'flex', gap: '6px', position: 'absolute', top: '0px' }}>
-                <div className="steam-element steam-1" style={{ width: '2px', height: '14px', background: 'var(--copper-light)', borderRadius: '50%', opacity: 0 }}></div>
-                <div className="steam-element steam-2" style={{ width: '2px', height: '14px', background: 'var(--copper-light)', borderRadius: '50%', opacity: 0 }}></div>
-                <div className="steam-element steam-3" style={{ width: '2px', height: '14px', background: 'var(--copper-light)', borderRadius: '50%', opacity: 0 }}></div>
-              </div>
-              <Coffee size={40} color="var(--copper)" style={{ filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.3))' }} />
+          {/* Section Header */}
+          <div className="section-head" style={{ marginBottom: '48px' }}>
+            <div className="eyebrow" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+              <Sparkles size={14} color="var(--accent-copper)" /> Kisah & Nilai Utama
             </div>
-            <h2>Kisah Warkop 1001cc</h2>
-            <p>Lebih dari sekadar tempat minum kopi — kami adalah ruang ketiga Anda, tempat bertemunya ide, energi, dan kebersamaan.</p>
+            <h2>Tentang Warkop 1001cc</h2>
+            <p>Rumah bagi setiap cerita — tempat bertemunya kehangatan kopi, inspirasi, dan kebersamaan 24 jam non-stop.</p>
           </div>
 
-          <div className="about-grid">
-            <div className="about-story">
-              <h3>Asal Usul Nama "1001cc"</h3>
-              <p>
-                Banyak pelanggan bertanya-tanya, dari mana angka <strong>1001cc</strong> berasal? Angka ini tidak dipilih secara acak. Di dunia otomotif, mesin berkapasitas besar di atas 1000cc melambangkan kekuatan, daya tahan, dan jiwa petualang tanpa batas. 
-              </p>
-              <p>
-                Kami mengambil filosofi tersebut ke dalam setiap cangkir kopi kami. Kopi kami diseduh dengan presisi tinggi dan takaran ganda (double-shot) untuk menghasilkan energi murni setara mesin legendaris 1001cc — dirancang khusus untuk mengisi kembali tenaga para pekerja kreatif, pengemudi jalanan, dan komunitas lokal yang tidak pernah lelah mengejar mimpi mereka.
-              </p>
-              <p>
-                Dimulai dari sebuah garasi kecil di pinggiran kota Bogor pada tahun 2020, Warkop 1001cc berkembang menjadi titik kumpul favorit bagi mereka yang mengapresiasi segelas kopi hitam tradisional tubruk maupun kopi susu modern yang disajikan dengan cepat tanpa antrean.
-              </p>
+          {/* Unified 2-Column Master Card (Photo + Verbatim Story) */}
+          <div style={{
+            background: '#FFFFFF',
+            borderRadius: '24px',
+            border: '1px solid var(--border-card)',
+            boxShadow: '0 15px 35px rgba(0, 0, 0, 0.06)',
+            overflow: 'hidden',
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))',
+            marginBottom: '56px'
+          }}>
+            {/* Left Column: Real Photo with Overlay Badge */}
+            <div style={{ position: 'relative', minHeight: '380px' }}>
+              <img 
+                src={warkopPhotoImg} 
+                alt="Area Duduk & Mural Kopi Cakra Warkop 1001cc" 
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  minHeight: '380px',
+                  objectFit: 'cover',
+                  display: 'block'
+                }}
+              />
+              <div style={{
+                position: 'absolute',
+                bottom: '16px',
+                left: '16px',
+                right: '16px',
+                background: 'rgba(255, 255, 255, 0.92)',
+                backdropFilter: 'blur(8px)',
+                padding: '12px 18px',
+                borderRadius: '14px',
+                border: '1px solid rgba(255,255,255,0.6)',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px',
+                boxShadow: '0 8px 20px rgba(0,0,0,0.12)'
+              }}>
+                <MapPin size={18} color="var(--accent-copper)" style={{ flexShrink: 0 }} />
+                <span style={{ fontSize: '0.86rem', fontWeight: '700', color: 'var(--text-dark)' }}>
+                  Bojonggede - Kemang (Bomang), Kalisuren
+                </span>
+              </div>
             </div>
 
-            <div className="about-values">
-              <h3 style={{ fontSize: '1.4rem', fontFamily: 'Fraunces, serif', marginBottom: '24px', borderBottom: '1px solid var(--line)', paddingBottom: '12px' }}>
-                Nilai Utama Kami
+            {/* Right Column: Verbatim Official Story */}
+            <div style={{
+              padding: '40px 36px',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center'
+            }}>
+              <div style={{
+                fontSize: '0.8rem',
+                fontFamily: 'var(--font-mono)',
+                fontWeight: '700',
+                color: 'var(--accent-copper)',
+                textTransform: 'uppercase',
+                letterSpacing: '0.08em',
+                marginBottom: '10px'
+              }}>
+                Berdiri Sejak 20 September 2025
+              </div>
+
+              <h3 style={{
+                fontFamily: 'var(--font-serif)',
+                fontSize: '1.9rem',
+                color: 'var(--text-headline)',
+                marginBottom: '20px',
+                lineHeight: '1.25'
+              }}>
+                Sejarah Singkat Warkop 1001cc
               </h3>
 
-              <div className="value-item">
-                <h4><Flame size={16} /> Tradisi & Inovasi</h4>
-                <p>Kami menyatukan metode seduh tarik tradisional yang menghasilkan aroma pekat dengan teknologi digital modern QR order untuk efisiensi transaksi.</p>
-              </div>
+              <p style={{
+                fontSize: '0.98rem',
+                color: 'var(--text-dark)',
+                lineHeight: '1.75',
+                marginBottom: '16px'
+              }}>
+                Warkop 1001cc resmi berdiri pada <strong>20 September 2025</strong>. Berawal dari kebiasaan tim yang sering berkumpul, berdiskusi, dan menikmati kopi di berbagai kafe, muncul sebuah ide sederhana: <em>mengapa tidak membangun tempat nongkrong sendiri?</em>
+              </p>
 
-              <div className="value-item">
-                <h4><Coffee size={16} /> 100% Kopi Nusantara</h4>
-                <p>Kami hanya menggunakan biji kopi lokal terbaik seperti Robusta Dampit (Malang) yang tebal cokelatnya, dan Arabika Preanger (Jawa Barat) dengan fruity acidity yang menyegarkan.</p>
-              </div>
+              <p style={{
+                fontSize: '0.98rem',
+                color: 'var(--text-dark)',
+                lineHeight: '1.75',
+                marginBottom: '28px'
+              }}>
+                Melihat masih terbatasnya tempat yang buka selama 24 jam, lahirlah <strong>Warkop 1001cc</strong> sebagai warkop yang nyaman, buka 24 jam, dan menjadi tempat berkumpul, bekerja, maupun bersantai kapan saja. Dengan menghadirkan kopi berkualitas dan suasana yang hangat, 1001cc hadir untuk menjadi rumah bagi setiap cerita dan pertemuan.
+              </p>
 
-              <div className="value-item">
-                <h4><Heart size={16} /> Hub Komunitas</h4>
-                <p>Warkop 1001cc didesain ramah stopkontak, Wi-Fi kencang, dan meja luas agar nyaman digunakan untuk bekerja (WFC), diskusi kelompok, maupun sekadar mengobrol santai.</p>
+              {/* Integrated Highlight Badges Row */}
+              <div style={{
+                display: 'flex',
+                gap: '10px',
+                flexWrap: 'wrap',
+                paddingTop: '20px',
+                borderTop: '1px solid var(--border-light)'
+              }}>
+                <span style={{
+                  background: 'var(--bg-cream)',
+                  padding: '6px 14px',
+                  borderRadius: '12px',
+                  fontSize: '0.82rem',
+                  fontWeight: '700',
+                  color: 'var(--text-dark)',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '6px'
+                }}>
+                  <Clock size={14} color="var(--accent-copper)" /> Buka 24 Jam Non-Stop
+                </span>
+                <span style={{
+                  background: 'var(--bg-cream)',
+                  padding: '6px 14px',
+                  borderRadius: '12px',
+                  fontSize: '0.82rem',
+                  fontWeight: '700',
+                  color: 'var(--text-dark)',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '6px'
+                }}>
+                  <Coffee size={14} color="var(--accent-copper)" /> Signature Kopi Cakra
+                </span>
+                <span style={{
+                  background: 'var(--bg-cream)',
+                  padding: '6px 14px',
+                  borderRadius: '12px',
+                  fontSize: '0.82rem',
+                  fontWeight: '700',
+                  color: 'var(--text-dark)',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '6px'
+                }}>
+                  <Users size={14} color="var(--accent-copper)" /> Ruang Kolaborasi
+                </span>
               </div>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* Stats Banner */}
-      <div className="stats-banner">
-        <div className="wrap">
-          <div className="stats-grid">
-            <div className="stat-item">
-              <div className="stat-num">1001cc</div>
-              <div className="stat-label">Kekuatan Kopi</div>
-            </div>
-            <div className="stat-item">
-              <div className="stat-num">100%</div>
-              <div className="stat-label">Biji Kopi Lokal</div>
-            </div>
-            <div className="stat-item">
-              <div className="stat-num">15+</div>
-              <div className="stat-label">Pilihan Menu</div>
-            </div>
-            <div className="stat-item">
-              <div className="stat-num">12k+</div>
-              <div className="stat-label">Cangkir / Bulan</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Process Section */}
-      <section className="section" style={{ paddingTop: '40px' }}>
-        <div className="wrap">
-          <div className="section-head" style={{ maxWidth: '700px' }}>
-            <div className="eyebrow">Proses Pembuatan</div>
-            <h2>Dari Biji Kopi Pilihan hingga ke Meja Anda</h2>
-            <p>Setiap cangkir melewati proses kontrol kualitas yang ketat agar rasa yang Anda nikmati hari ini sama nikmatnya dengan cangkir pertama Anda.</p>
+          {/* 3 Core Values Section Title */}
+          <div style={{ textAlign: 'center', marginBottom: '32px' }}>
+            <h3 style={{
+              fontFamily: 'var(--font-serif)',
+              fontSize: '1.6rem',
+              color: 'var(--text-headline)'
+            }}>
+              3 Nilai Utama Kami
+            </h3>
+            <p style={{ fontSize: '0.92rem', color: 'var(--text-muted)', marginTop: '4px' }}>
+              Prinsip yang selalu kami jaga untuk menghadirkan kenyamanan terbaik bagi Anda.
+            </p>
           </div>
 
+          {/* 3 Core Value Cards */}
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
-            gap: '24px',
-            marginTop: '40px'
+            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+            gap: '24px'
           }}>
-            <div style={{ background: 'var(--roast)', padding: '28px', borderRadius: '6px', border: '1px solid var(--line)' }}>
-              <span className="mono" style={{ color: 'var(--copper-light)', fontSize: '0.8rem', fontWeight: 'bold' }}>TAHAP 01</span>
-              <h3 style={{ fontSize: '1.15rem', margin: '12px 0 8px' }}>Kurasi Biji Kopi</h3>
-              <p style={{ color: 'var(--ink-soft)', fontSize: '0.88rem', lineHeight: '1.6' }}>Biji kopi robusta dan arabika dipilih langsung dari petani mitra lokal pada tingkat kematangan ceri merah sempurna.</p>
+            {/* Value 1 */}
+            <div style={{
+              background: '#FFFFFF',
+              padding: '32px 28px',
+              borderRadius: '20px',
+              border: '1px solid var(--border-card)',
+              boxShadow: '0 8px 24px rgba(0,0,0,0.04)',
+              transition: 'transform 0.3s ease, boxShadow 0.3s ease'
+            }}>
+              <div style={{
+                width: '52px',
+                height: '52px',
+                borderRadius: '14px',
+                background: 'rgba(201, 110, 40, 0.08)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginBottom: '20px'
+              }}>
+                <Heart size={26} color="var(--accent-copper)" />
+              </div>
+              <h4 style={{
+                fontFamily: 'var(--font-serif)',
+                fontSize: '1.3rem',
+                marginBottom: '10px',
+                color: 'var(--text-headline)'
+              }}>
+                Rumah Bagi Semua
+              </h4>
+              <p style={{
+                fontSize: '0.9rem',
+                color: 'var(--text-muted)',
+                lineHeight: '1.65'
+              }}>
+                Tempat nongkrong hangat, terbuka, dan nyaman untuk berkumpul, bekerja (WFC), maupun bersantai kapan saja bersama teman dan komunitas.
+              </p>
             </div>
 
-            <div style={{ background: 'var(--roast)', padding: '28px', borderRadius: '6px', border: '1px solid var(--line)' }}>
-              <span className="mono" style={{ color: 'var(--copper-light)', fontSize: '0.8rem', fontWeight: 'bold' }}>TAHAP 02</span>
-              <h3 style={{ fontSize: '1.15rem', margin: '12px 0 8px' }}>Penyangraian Presisi</h3>
-              <p style={{ color: 'var(--ink-soft)', fontSize: '0.88rem', lineHeight: '1.6' }}>Proses sangrai dilakukan dengan profil medium-to-dark roast untuk mengeluarkan aroma karamel manis alami khas robusta.</p>
+            {/* Value 2 */}
+            <div style={{
+              background: '#FFFFFF',
+              padding: '32px 28px',
+              borderRadius: '20px',
+              border: '1px solid var(--border-card)',
+              boxShadow: '0 8px 24px rgba(0,0,0,0.04)',
+              transition: 'transform 0.3s ease, boxShadow 0.3s ease'
+            }}>
+              <div style={{
+                width: '52px',
+                height: '52px',
+                borderRadius: '14px',
+                background: 'rgba(201, 110, 40, 0.08)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginBottom: '20px'
+              }}>
+                <Coffee size={26} color="var(--accent-copper)" />
+              </div>
+              <h4 style={{
+                fontFamily: 'var(--font-serif)',
+                fontSize: '1.3rem',
+                marginBottom: '10px',
+                color: 'var(--text-headline)'
+              }}>
+                Racikan Orisinal
+              </h4>
+              <p style={{
+                fontSize: '0.9rem',
+                color: 'var(--text-muted)',
+                lineHeight: '1.65'
+              }}>
+                Signature Kopi Cakra dan Cakra Matcha Latte disajikan dengan racikan kopi pilihan berkualitas tinggi untuk sensasi nikmat tak terlupakan.
+              </p>
             </div>
 
-            <div style={{ background: 'var(--roast)', padding: '28px', borderRadius: '6px', border: '1px solid var(--line)' }}>
-              <span className="mono" style={{ color: 'var(--copper-light)', fontSize: '0.8rem', fontWeight: 'bold' }}>TAHAP 03</span>
-              <h3 style={{ fontSize: '1.15rem', margin: '12px 0 8px' }}>Penyeduhan Segar</h3>
-              <p style={{ color: 'var(--ink-soft)', fontSize: '0.88rem', lineHeight: '1.6' }}>Kopi baru akan digiling (grind-on-demand) sesaat sebelum diseduh guna menjaga kesegaran minyak alami kopi.</p>
+            {/* Value 3 */}
+            <div style={{
+              background: '#FFFFFF',
+              padding: '32px 28px',
+              borderRadius: '20px',
+              border: '1px solid var(--border-card)',
+              boxShadow: '0 8px 24px rgba(0,0,0,0.04)',
+              transition: 'transform 0.3s ease, boxShadow 0.3s ease'
+            }}>
+              <div style={{
+                width: '52px',
+                height: '52px',
+                borderRadius: '14px',
+                background: 'rgba(201, 110, 40, 0.08)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginBottom: '20px'
+              }}>
+                <Clock size={26} color="var(--accent-copper)" />
+              </div>
+              <h4 style={{
+                fontFamily: 'var(--font-serif)',
+                fontSize: '1.3rem',
+                marginBottom: '10px',
+                color: 'var(--text-headline)'
+              }}>
+                Pelayanan Buka 24 Jam
+              </h4>
+              <p style={{
+                fontSize: '0.9rem',
+                color: 'var(--text-muted)',
+                lineHeight: '1.65'
+              }}>
+                Buka 24 jam non-stop setiap hari (Senin - Minggu) untuk selalu siap menjadi tempat berkumpul dan menemani setiap cerita Anda.
+              </p>
             </div>
           </div>
         </div>
