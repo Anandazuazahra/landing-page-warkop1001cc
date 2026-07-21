@@ -123,6 +123,7 @@ nav .wrap {
   align-items: center;
   justify-content: space-between;
   height: 72px;
+  position: relative;
 }
 
 .brand {
@@ -146,7 +147,11 @@ nav .wrap {
   gap: 28px;
   font-size: 0.9rem;
   font-weight: 700;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
+
 
 .navlinks a {
   color: var(--text-dark);
