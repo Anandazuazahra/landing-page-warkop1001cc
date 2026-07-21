@@ -192,7 +192,7 @@ export default function App() {
             href="https://wa.me/6288289277876?text=Halo%20Warkop%201001cc%2C%20saya%20ingin%20reservasi%20tempat"
             target="_blank"
             rel="noopener noreferrer"
-            className="nav-cta"
+            className="nav-cta desktop-only"
             style={{ textDecoration: 'none' }}
           >
             Reservasi Tempat <ArrowRight size={14} className="btn-icon" />

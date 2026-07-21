@@ -244,23 +244,28 @@ nav .wrap {
   border-color: var(--accent-copper);
 }
 
-@media (max-width: 860px) {
+.desktop-only {
+  display: inline-flex;
+}
 
+@media (max-width: 860px) {
   .navlinks,
-  .nav-cta {
+  .nav-cta,
+  .desktop-only {
     display: none !important;
   }
 
   .mobile-menu-toggle {
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: center;
   }
 
   .mobile-nav-drawer.open {
-    display: flex;
+    display: flex !important;
   }
 }
+
 
 /* HERO SECTION & PARALLAX */
 .hero {
