@@ -248,11 +248,18 @@ nav .wrap {
   display: inline-flex;
 }
 
-@media (max-width: 860px) {
+@media screen and (max-width: 1024px) {
   .navlinks,
   .nav-cta,
   .desktop-only {
     display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
   }
 
   .mobile-menu-toggle {
@@ -265,6 +272,7 @@ nav .wrap {
     display: flex !important;
   }
 }
+
 
 
 /* HERO SECTION & PARALLAX */
