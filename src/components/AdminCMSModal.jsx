@@ -279,6 +279,7 @@ export default function AdminCMSModal({ isOpen, onClose }) {
 
   return (
     <div
+      className="cms-modal-overlay"
       style={{
         position: 'fixed',
         inset: 0,
@@ -479,6 +480,7 @@ export default function AdminCMSModal({ isOpen, onClose }) {
       ) : (
         /* --- MAIN CMS DASHBOARD MODAL --- */
         <div
+          className="cms-modal-container"
           style={{
             width: '100%',
             maxWidth: '1080px',
@@ -496,6 +498,7 @@ export default function AdminCMSModal({ isOpen, onClose }) {
         >
           {/* Header Bar */}
           <div
+            className="cms-header-bar"
             style={{
               padding: '20px 24px',
               background: 'linear-gradient(90deg, #3E2312 0%, #2C180B 100%)',
@@ -614,9 +617,10 @@ export default function AdminCMSModal({ isOpen, onClose }) {
           )}
 
           {/* CMS Body Layout: Left Sidebar + Right Form Panel */}
-          <div style={{ display: 'flex', flex: 1, overflow: 'hidden' }}>
+          <div className="cms-body-layout" style={{ display: 'flex', flex: 1, overflow: 'hidden' }}>
             {/* Left Navigation Tabs */}
             <div
+              className="cms-sidebar-tabs"
               style={{
                 width: '260px',
                 background: '#EFE6D8',
@@ -628,7 +632,7 @@ export default function AdminCMSModal({ isOpen, onClose }) {
                 flexShrink: 0
               }}
             >
-              <div style={{ fontSize: '0.72rem', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.1em', color: '#665544', marginBottom: '8px', paddingLeft: '8px', fontFamily: 'Space Mono, monospace' }}>
+              <div className="cms-sidebar-tabs-title" style={{ fontSize: '0.72rem', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.1em', color: '#665544', marginBottom: '8px', paddingLeft: '8px', fontFamily: 'Space Mono, monospace' }}>
                 MODUL MANAJEMEN
               </div>
 
@@ -791,7 +795,7 @@ export default function AdminCMSModal({ isOpen, onClose }) {
                 </span>
               </button>
 
-              <div style={{ marginTop: 'auto', borderTop: '1px solid #E0D0BC', paddingTop: '14px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+              <div className="cms-sidebar-actions" style={{ marginTop: 'auto', borderTop: '1px solid #E0D0BC', paddingTop: '14px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
                 <button
                   onClick={exportCMSDataJSON}
                   style={{
@@ -852,7 +856,7 @@ export default function AdminCMSModal({ isOpen, onClose }) {
             </div>
 
             {/* Right Editing Content Area */}
-            <div style={{ flex: 1, padding: '24px 28px', overflowY: 'auto', background: '#FAF6F0' }}>
+            <div className="cms-content-panel" style={{ flex: 1, padding: '24px 28px', overflowY: 'auto', background: '#FAF6F0' }}>
               {/* Top Stat Metrics Banner (shadcn Dashboard Pattern - LP Warm Theme) */}
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(170px, 1fr))', gap: '14px', marginBottom: '24px' }}>
                 <div style={{ background: '#FFFFFF', border: '1px solid #E0D0BC', borderRadius: '14px', padding: '14px 16px', boxShadow: '0 4px 14px rgba(62, 35, 18, 0.05)' }}>

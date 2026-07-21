@@ -861,3 +861,66 @@ nav .wrap {
     transform: none !important;
   }
 }
+
+/* --- CMS Admin Modal Mobile Responsive Optimizations --- */
+@media (max-width: 768px) {
+  .cms-modal-overlay {
+    padding: 6px !important;
+  }
+
+  .cms-modal-container {
+    max-height: 98vh !important;
+    border-radius: 16px !important;
+    margin: auto 0 !important;
+  }
+
+  .cms-header-bar {
+    padding: 14px 16px !important;
+  }
+
+  .cms-body-layout {
+    flex-direction: column !important;
+    overflow-y: auto !important;
+  }
+
+  .cms-sidebar-tabs {
+    width: 100% !important;
+    border-right: none !important;
+    border-bottom: 1px solid #E0D0BC !important;
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    padding: 10px !important;
+    gap: 8px !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .cms-sidebar-tabs-title {
+    display: none !important;
+  }
+
+  .cms-sidebar-tabs button {
+    padding: 8px 12px !important;
+    font-size: 0.82rem !important;
+    flex-shrink: 0 !important;
+  }
+
+  .cms-sidebar-actions {
+    display: none !important;
+  }
+
+  .cms-content-panel {
+    padding: 14px !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .cms-content-panel input[type="text"],
+  .cms-content-panel input[type="password"],
+  .cms-content-panel textarea,
+  .cms-content-panel select {
+    font-size: 16px !important;
+    padding: 12px 14px !important;
+  }
+}
