@@ -82,7 +82,7 @@ export default function Events() {
           </ScrollReveal>
 
           {/* Events Grid */}
-          <div className="events-grid stagger-parent reveal-on-scroll" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '24px' }}>
+          <div className="events-grid stagger-parent reveal-on-scroll" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px' }}>
             {filteredEvents.map((evt) => (
               <div 
                 key={evt.id}

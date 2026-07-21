@@ -65,7 +65,7 @@ export default function ContactModal({ isOpen, onClose, onSuccess }) {
             />
           </div>
 
-          <div className="form-group" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
+          <div className="form-group" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '12px' }}>
             <div>
               <label htmlFor="guests">Jumlah Orang</label>
               <select

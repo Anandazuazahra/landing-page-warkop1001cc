@@ -144,9 +144,9 @@ export default function TestimonialsSection() {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-              gap: '24px',
-              marginBottom: '44px'
+              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+              gap: '20px',
+              marginBottom: '36px'
             }}
           >
             {REAL_GOOGLE_REVIEWS.map((t) => (

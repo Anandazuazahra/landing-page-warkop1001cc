@@ -172,8 +172,8 @@ export default function GallerySection() {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
-              gap: '24px'
+              gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))',
+              gap: '18px'
             }}
           >
             {filteredItems.map((item, index) => (

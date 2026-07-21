@@ -122,7 +122,7 @@ export default function SignatureMenu() {
 
   return (
     <ScrollReveal variant="up" style={{ padding: '0 0 54px', width: '100%' }}>
-      {/* 1. HERO BANNER CONTAINER: Compact Section Height as in Screenshot */}
+      {/* 1. HERO BANNER CONTAINER */}
       <motion.div
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
@@ -134,8 +134,8 @@ export default function SignatureMenu() {
           width: '100%',
           position: 'relative',
           overflow: 'hidden',
-          padding: '40px 20px 32px',
-          minHeight: '520px',
+          padding: '24px 16px 24px',
+          minHeight: 'clamp(380px, 50vw, 520px)',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
@@ -168,7 +168,7 @@ export default function SignatureMenu() {
               style={{
                 width: '100%',
                 textAlign: 'center',
-                fontSize: 'clamp(3.5rem, 15vw, 11rem)',
+                fontSize: 'clamp(2.8rem, 14vw, 10rem)',
                 fontFamily: 'Fraunces, serif',
                 fontWeight: '900',
                 color: 'rgba(255, 255, 255, 0.04)',
@@ -202,19 +202,19 @@ export default function SignatureMenu() {
               zIndex: 5
             }}
           >
-            {/* Stage Box: 460px Height */}
+            {/* Stage Box */}
             <div
               style={{
                 position: 'relative',
                 width: '100%',
                 maxWidth: '1200px',
-                height: '460px',
+                height: 'clamp(260px, 42vw, 440px)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center'
               }}
             >
-              {/* LEFT DECORATIVE ELEMENT (Biji Kopi): z-index 3 BEHIND glass cup, opacity 0.45 */}
+              {/* LEFT DECORATIVE ELEMENT (Biji Kopi): Hidden on small mobile screens */}
               {item.floatLeftImg && (
                 <motion.img
                   src={item.floatLeftImg}
@@ -234,13 +234,14 @@ export default function SignatureMenu() {
                       ease: 'easeInOut'
                     }
                   }}
+                  className="hero-float-decor"
                   style={{
                     position: 'absolute',
-                    left: '12%',
+                    left: '8%',
                     top: '50%',
                     transform: 'translateY(-50%)',
-                    width: '320px',
-                    maxWidth: '28%',
+                    width: ' clamp(140px, 20vw, 300px)',
+                    maxWidth: '24%',
                     filter: 'drop-shadow(0 15px 30px rgba(0,0,0,0.45))',
                     zIndex: 3,
                     pointerEvents: 'none'
@@ -264,20 +265,20 @@ export default function SignatureMenu() {
                   left: '50%',
                   top: '50%',
                   transform: 'translate(-50%, -50%)',
-                  width: '520px',
-                  height: '420px',
+                  width: 'clamp(260px, 45vw, 500px)',
+                  height: 'clamp(220px, 40vw, 400px)',
                   borderRadius: '50%',
                   background:
                     item.id === 'kopi_cakra'
                       ? 'radial-gradient(circle, rgba(201, 110, 40, 0.52) 0%, transparent 70%)'
                       : 'radial-gradient(circle, rgba(136, 171, 73, 0.52) 0%, transparent 70%)',
-                  filter: 'blur(45px)',
+                  filter: 'blur(40px)',
                   pointerEvents: 'none',
                   zIndex: 1
                 }}
               />
 
-              {/* MASSIVE GLASS CUP (ONLY THE GLASS IS ENLARGED VISUALLY TO FILL THE COMPACT BANNER) */}
+              {/* MASSIVE GLASS CUP (FLUID FOR ALL DEVICES) */}
               <motion.img
                 src={item.glassImage}
                 alt={item.name}
@@ -297,20 +298,20 @@ export default function SignatureMenu() {
                   }
                 }}
                 style={{
-                  height: item.glassHeight,
+                  height: '100%',
+                  maxHeight: 'clamp(260px, 42vw, 440px)',
                   width: 'auto',
-                  maxWidth: 'none',
+                  maxWidth: '85vw',
                   objectFit: 'contain',
                   position: 'relative',
                   margin: '0 auto',
                   display: 'block',
                   zIndex: 20,
-                  transform: item.glassTransform,
-                  filter: 'drop-shadow(0 45px 95px rgba(0,0,0,0.95))'
+                  filter: 'drop-shadow(0 30px 75px rgba(0,0,0,0.9))'
                 }}
               />
 
-              {/* RIGHT DECORATIVE ELEMENT (Splash / Chocolate): z-index 3 BEHIND glass cup, opacity 0.45 */}
+              {/* RIGHT DECORATIVE ELEMENT */}
               {item.floatRightImg && (
                 <motion.img
                   src={item.floatRightImg}
@@ -332,13 +333,14 @@ export default function SignatureMenu() {
                       ease: 'easeInOut'
                     }
                   }}
+                  className="hero-float-decor"
                   style={{
                     position: 'absolute',
-                    right: '12%',
+                    right: '8%',
                     top: '50%',
                     transform: 'translateY(-50%)',
-                    width: '320px',
-                    maxWidth: '28%',
+                    width: 'clamp(140px, 20vw, 300px)',
+                    maxWidth: '24%',
                     filter: 'drop-shadow(0 15px 30px rgba(0,0,0,0.45))',
                     zIndex: 3,
                     pointerEvents: 'none'
@@ -354,24 +356,25 @@ export default function SignatureMenu() {
               transition={{ duration: 0.4, ease: 'easeOut', delay: 0.3 }}
               style={{
                 position: 'relative',
-                marginTop: '16px',
-                padding: '10px 24px',
+                marginTop: '12px',
+                padding: '8px 18px',
                 borderRadius: '30px',
-                background: 'rgba(0, 0, 0, 0.7)',
+                background: 'rgba(0, 0, 0, 0.75)',
                 border: `1px solid ${item.pillBg}`,
                 color: '#FFF',
                 fontWeight: '700',
-                fontSize: '0.92rem',
+                fontSize: 'clamp(0.78rem, 2vw, 0.92rem)',
                 letterSpacing: '0.02em',
                 display: 'inline-flex',
                 alignItems: 'center',
-                gap: '8px',
+                gap: '6px',
                 zIndex: 25,
                 backdropFilter: 'blur(8px)',
-                boxShadow: '0 8px 25px rgba(0,0,0,0.45)'
+                boxShadow: '0 8px 25px rgba(0,0,0,0.45)',
+                textAlign: 'center'
               }}
             >
-              <Sparkles size={16} color={item.textColor} />
+              <Sparkles size={15} color={item.textColor} style={{ flexShrink: 0 }} />
               <span>{item.badgeText}</span>
             </motion.div>
           </motion.div>
@@ -379,27 +382,27 @@ export default function SignatureMenu() {
       </motion.div>
 
       {/* NAVIGATION TABS & CONTROLS ROW BELOW BANNER */}
-      <div className="wrap" style={{ marginTop: '28px' }}>
+      <div className="wrap" style={{ marginTop: '24px' }}>
         <div
           style={{
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center',
-            marginBottom: '32px',
+            marginBottom: '24px',
             flexWrap: 'wrap',
-            gap: '16px'
+            gap: '14px'
           }}
         >
           {/* Left Category Badges */}
-          <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
+          <div style={{ display: 'flex', gap: '8px', alignItems: 'center', flexWrap: 'wrap' }}>
             <span
               style={{
                 background: item.pillBg,
                 color: '#FFFFFF',
-                padding: '8px 20px',
+                padding: '6px 16px',
                 borderRadius: '20px',
                 fontWeight: '700',
-                fontSize: '0.86rem',
+                fontSize: '0.82rem',
                 boxShadow: '0 4px 12px rgba(0,0,0,0.12)',
                 transition: 'background 0.3s ease'
               }}
@@ -410,10 +413,10 @@ export default function SignatureMenu() {
               style={{
                 background: '#EFE6D8',
                 color: 'var(--text-muted)',
-                padding: '8px 18px',
+                padding: '6px 14px',
                 borderRadius: '20px',
                 fontWeight: '600',
-                fontSize: '0.86rem',
+                fontSize: '0.82rem',
                 border: '1px solid var(--border-light)'
               }}
             >
@@ -422,7 +425,7 @@ export default function SignatureMenu() {
           </div>
 
           {/* Right Controls: Product Selector Pills + Prev/Next Arrows */}
-          <div style={{ display: 'flex', gap: '12px', alignItems: 'center', flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', gap: '10px', alignItems: 'center', flexWrap: 'wrap' }}>
             {/* Product Selector Pills */}
             {SIGNATURE_ITEMS.map((sig, idx) => (
               <motion.button
@@ -434,10 +437,10 @@ export default function SignatureMenu() {
                   background: activeIndex === idx ? sig.pillBg : '#FFFFFF',
                   color: activeIndex === idx ? '#FFFFFF' : 'var(--text-dark)',
                   border: activeIndex === idx ? 'none' : '1px solid var(--border-card)',
-                  padding: '9px 20px',
+                  padding: '8px 16px',
                   borderRadius: '12px',
                   fontWeight: '700',
-                  fontSize: '0.88rem',
+                  fontSize: '0.84rem',
                   cursor: 'pointer',
                   boxShadow: activeIndex === idx ? '0 6px 16px rgba(0,0,0,0.15)' : 'none',
                   transition: 'all 0.25s ease'
@@ -448,7 +451,7 @@ export default function SignatureMenu() {
             ))}
 
             {/* Prev & Next Arrow Buttons */}
-            <div style={{ display: 'flex', gap: '8px', marginLeft: '6px' }}>
+            <div style={{ display: 'flex', gap: '6px' }}>
               <motion.button
                 onClick={handlePrev}
                 whileHover={{ scale: 1.1, backgroundColor: 'var(--border-card)' }}
@@ -456,8 +459,8 @@ export default function SignatureMenu() {
                 transition={{ duration: 0.15 }}
                 aria-label="Previous Product"
                 style={{
-                  width: '42px',
-                  height: '42px',
+                  width: '38px',
+                  height: '38px',
                   borderRadius: '50%',
                   background: '#FFFFFF',
                   border: '1px solid var(--border-card)',
@@ -469,7 +472,7 @@ export default function SignatureMenu() {
                   boxShadow: '0 4px 12px rgba(0,0,0,0.06)'
                 }}
               >
-                <ChevronLeft size={20} />
+                <ChevronLeft size={18} />
               </motion.button>
 
               <motion.button
@@ -479,8 +482,8 @@ export default function SignatureMenu() {
                 transition={{ duration: 0.15 }}
                 aria-label="Next Product"
                 style={{
-                  width: '42px',
-                  height: '42px',
+                  width: '38px',
+                  height: '38px',
                   borderRadius: '50%',
                   background: '#FFFFFF',
                   border: '1px solid var(--border-card)',
@@ -492,20 +495,20 @@ export default function SignatureMenu() {
                   boxShadow: '0 4px 12px rgba(0,0,0,0.06)'
                 }}
               >
-                <ChevronRight size={20} />
+                <ChevronRight size={18} />
               </motion.button>
             </div>
           </div>
         </div>
 
-        {/* ELEGANT MASTER PRODUCT PRESENTATION CARD (Eliminates Empty Space) */}
+        {/* ELEGANT MASTER PRODUCT PRESENTATION CARD */}
         <div
           style={{
             background: '#FFFFFF',
-            borderRadius: '24px',
+            borderRadius: '20px',
             border: '1px solid var(--border-card)',
             boxShadow: '0 12px 36px rgba(44, 24, 11, 0.05)',
-            padding: '44px 48px',
+            padding: 'clamp(24px, 4vw, 44px) clamp(18px, 4vw, 48px)',
             maxWidth: '1100px',
             margin: '0 auto'
           }}
@@ -513,9 +516,9 @@ export default function SignatureMenu() {
           <h2
             style={{
               fontFamily: 'var(--font-serif)',
-              fontSize: 'clamp(1.8rem, 3.5vw, 2.3rem)',
+              fontSize: 'clamp(1.4rem, 3.2vw, 2.2rem)',
               color: 'var(--text-headline)',
-              marginBottom: '24px',
+              marginBottom: '20px',
               lineHeight: '1.28',
               textAlign: 'center'
             }}
@@ -526,8 +529,8 @@ export default function SignatureMenu() {
           <div
             style={{
               color: 'var(--text-dark)',
-              fontSize: '1rem',
-              lineHeight: '1.8',
+              fontSize: 'clamp(0.9rem, 2vw, 1rem)',
+              lineHeight: '1.75',
               textAlign: 'left'
             }}
           >

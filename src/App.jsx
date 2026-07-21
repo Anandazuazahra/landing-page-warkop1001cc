@@ -16,7 +16,9 @@ import {
   ExternalLink,
   ArrowRight,
   Camera,
-  Star
+  Star,
+  Menu,
+  X
 } from 'lucide-react';
 
 const InstagramIcon = ({ size = 14, color = "#C96E28" }) => (
@@ -44,6 +46,9 @@ import berandaWarkopPhotoImg from './assets/beranda_warkop_photo.jpg';
 export default function App() {
   // Navigation / Tab State: 'home', 'signature', 'galeri', 'testimoni', 'event', 'about'
   const [activeTab, setActiveTab] = useState('home');
+
+  // Mobile Drawer State
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // Sticky Glass Navbar Scroll State
   const [isScrolled, setIsScrolled] = useState(false);
@@ -99,18 +104,15 @@ export default function App() {
   const handleNavClick = (tab, e) => {
     if (e) e.preventDefault();
     setActiveTab(tab);
+    setIsMobileMenuOpen(false);
 
-    if (tab === 'home') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    } else {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
     <>
       {/* Toast Notification Container */}
-      <div style={{ position: 'fixed', bottom: '24px', right: '24px', zIndex: 9999, display: 'flex', flexDirection: 'column', gap: '10px', maxWidth: '380px' }}>
+      <div style={{ position: 'fixed', bottom: '20px', right: '20px', left: '20px', zIndex: 9999, display: 'flex', flexDirection: 'column', gap: '10px', maxWidth: '380px', margin: '0 auto 0 auto' }}>
         {toasts.map((toast) => (
           <div
             key={toast.id}
@@ -142,6 +144,7 @@ export default function App() {
             <span style={{ fontSize: '1.15rem' }}>Warkop 1001cc</span>
           </div>
 
+          {/* Desktop Navigation Links */}
           <div className="navlinks">
             <a
               href="#"
@@ -184,6 +187,7 @@ export default function App() {
             </a>
           </div>
 
+          {/* Desktop CTA Button */}
           <a
             href="https://wa.me/6288289277876?text=Halo%20Warkop%201001cc%2C%20saya%20ingin%20reservasi%20tempat"
             target="_blank"
@@ -192,6 +196,73 @@ export default function App() {
             style={{ textDecoration: 'none' }}
           >
             Reservasi Tempat <ArrowRight size={14} className="btn-icon" />
+          </a>
+
+          {/* Mobile Hamburger Menu Toggle Button */}
+          <button 
+            className="mobile-menu-toggle"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Buka Menu Navigasi"
+          >
+            {isMobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
+          </button>
+        </div>
+
+        {/* Mobile Navigation Drawer */}
+        <div className={`mobile-nav-drawer ${isMobileMenuOpen ? 'open' : ''}`}>
+          <a
+            href="#"
+            className={`mobile-nav-link ${activeTab === 'home' ? 'active' : ''}`}
+            onClick={(e) => handleNavClick('home', e)}
+          >
+            <span>Beranda</span>
+            <ArrowRight size={16} />
+          </a>
+
+          <a
+            href="#"
+            className={`mobile-nav-link ${activeTab === 'signature' ? 'active' : ''}`}
+            onClick={(e) => handleNavClick('signature', e)}
+          >
+            <span>Menu Signature</span>
+            <ArrowRight size={16} />
+          </a>
+
+          <a
+            href="#"
+            className={`mobile-nav-link ${activeTab === 'testimoni' ? 'active' : ''}`}
+            onClick={(e) => handleNavClick('testimoni', e)}
+          >
+            <span>Testimoni Google</span>
+            <ArrowRight size={16} />
+          </a>
+
+          <a
+            href="#"
+            className={`mobile-nav-link ${activeTab === 'event' ? 'active' : ''}`}
+            onClick={(e) => handleNavClick('event', e)}
+          >
+            <span>Event & Kegiatan</span>
+            <ArrowRight size={16} />
+          </a>
+
+          <a
+            href="#"
+            className={`mobile-nav-link ${activeTab === 'about' ? 'active' : ''}`}
+            onClick={(e) => handleNavClick('about', e)}
+          >
+            <span>Tentang Warkop</span>
+            <ArrowRight size={16} />
+          </a>
+
+          <a
+            href="https://wa.me/6288289277876?text=Halo%20Warkop%201001cc%2C%20saya%20ingin%20reservasi%20tempat"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary"
+            style={{ width: '100%', justifyContent: 'center', marginTop: '8px', padding: '12px', textDecoration: 'none' }}
+          >
+            Reservasi Tempat WA <ArrowRight size={16} />
           </a>
         </div>
       </nav>
@@ -206,7 +277,7 @@ export default function App() {
                 <ScrollReveal variant="up">
                   <div>
                     <div className="eyebrow">Warkop & Ruang Kolaborasi</div>
-                    <h1>Tempat Nongkrong Hangat,<br /><em>Kopi Terbaik</em> Setiap Saat.</h1>
+                    <h1>Tempat Nongkrong Hangat,<br className="hero-br" /><em>Kopi Terbaik</em> Setiap Saat.</h1>
                     <p className="lead">Nikmati kopi nusantara pilihan, makanan favorit, dan suasana nyaman untuk bekerja, berdiskusi, maupun bersantai bersama teman.</p>
                     
                     <div className="hero-actions">
@@ -295,18 +366,18 @@ export default function App() {
             <TestimonialsSection />
 
             {/* Map / Location Banner */}
-            <section className="section" style={{ background: 'var(--bg-cream)', padding: '60px 0' }}>
+            <section className="section" style={{ background: 'var(--bg-cream)', padding: '50px 0' }}>
               <div className="wrap">
                 <ScrollReveal variant="up">
-                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '40px', alignItems: 'center' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '32px', alignItems: 'center' }}>
                     <div>
                       <div className="eyebrow">Lokasi & Jam Operasional</div>
-                      <h2 style={{ fontSize: '2rem', marginBottom: '16px', color: 'var(--text-headline)' }}>Kunjungi Warkop 1001cc</h2>
-                      <p style={{ color: 'var(--text-muted)', lineHeight: '1.7', marginBottom: '24px' }}>
+                      <h2 style={{ fontSize: 'clamp(1.6rem, 3.5vw, 2rem)', marginBottom: '14px', color: 'var(--text-headline)' }}>Kunjungi Warkop 1001cc</h2>
+                      <p style={{ color: 'var(--text-muted)', lineHeight: '1.65', marginBottom: '20px', fontSize: '0.95rem' }}>
                         Terletak strategis di jalur Bomang (Bojonggede - Kemang), Kalisuren, Tajur Halang. Tempat nongkrong luas, parkir aman, dan tempat yang pas untuk bertemu teman.
                       </p>
 
-                      <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', fontSize: '0.95rem', color: 'var(--text-dark)' }}>
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', fontSize: '0.9rem', color: 'var(--text-dark)' }}>
                         {/* Clickable Address */}
                         <a 
                           href="https://maps.google.com/?q=Warkop+1001cc+Bojonggede+Kemang+Bomang+Kalisuren" 
@@ -351,7 +422,7 @@ export default function App() {
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="card-hover"
-                      style={{ display: 'block', borderRadius: '20px', overflow: 'hidden', border: '1px solid var(--border-card)', boxShadow: '0 15px 35px rgba(0,0,0,0.08)', textDecoration: 'none', position: 'relative' }}
+                      style={{ display: 'block', borderRadius: '18px', overflow: 'hidden', border: '1px solid var(--border-card)', boxShadow: '0 15px 35px rgba(0,0,0,0.08)', textDecoration: 'none', position: 'relative' }}
                     >
                       <img src={mapImg} alt="Peta Lokasi Warkop 1001cc" style={{ width: '100%', height: 'auto', display: 'block' }} />
                       <div style={{
@@ -388,8 +459,8 @@ export default function App() {
         {activeTab === 'about' && <AboutWarkop />}
       </main>
 
-      {/* Footer - Verbatim Match */}
-      <footer style={{ background: '#1A0E07', color: '#D4A373', padding: '36px 0 28px', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
+      {/* Footer */}
+      <footer style={{ background: '#1A0E07', color: '#D4A373', padding: '32px 0 24px', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
         <div className="wrap" style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '14px' }}>
           {/* Top Title */}
           <div style={{
@@ -409,8 +480,8 @@ export default function App() {
             flexWrap: 'wrap',
             alignItems: 'center',
             justifyContent: 'center',
-            gap: '10px',
-            fontSize: '0.86rem',
+            gap: '12px 20px',
+            fontSize: '0.85rem',
             fontFamily: 'var(--font-mono)',
             color: '#C96E28'
           }}>
@@ -424,8 +495,6 @@ export default function App() {
               <MapPin size={14} color="#C96E28" /> Kalisuren, Tajur Halang
             </a>
 
-            <span style={{ color: 'rgba(255,255,255,0.25)' }}>·</span>
-
             {/* Clickable Phone / WhatsApp */}
             <a 
               href="https://wa.me/6288289277876" 
@@ -436,8 +505,6 @@ export default function App() {
               <Phone size={14} color="#C96E28" /> 0882-8927-7876
             </a>
 
-            <span style={{ color: 'rgba(255,255,255,0.25)' }}>·</span>
-
             {/* Clickable Email */}
             <a 
               href="mailto:warkop1001cc@gmail.com" 
@@ -445,8 +512,6 @@ export default function App() {
             >
               <Mail size={14} color="#C96E28" /> warkop1001cc@gmail.com
             </a>
-
-            <span style={{ color: 'rgba(255,255,255,0.25)' }}>·</span>
 
             {/* Clickable Instagram */}
             <a 
@@ -461,9 +526,9 @@ export default function App() {
 
           {/* Bottom Subtitle Line */}
           <div style={{
-            fontSize: '0.72rem',
+            fontSize: '0.7rem',
             fontFamily: 'var(--font-mono)',
-            letterSpacing: '0.12em',
+            letterSpacing: '0.1em',
             color: 'rgba(255,255,255,0.4)',
             textTransform: 'uppercase',
             marginTop: '4px'
