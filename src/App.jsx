@@ -29,6 +29,19 @@ const InstagramIcon = ({ size = 14, color = "#C96E28" }) => (
   </svg>
 );
 
+const YoutubeIcon = ({ size = 14, color = "#C96E28" }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
+    <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17z"></path>
+    <path d="m10 15 5-3-5-3v6z"></path>
+  </svg>
+);
+
+const TikTokIcon = ({ size = 14, color = "#C96E28" }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
+    <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+  </svg>
+);
+
 import logoImg from './assets/logo.png';
 import heroLatteImg from './assets/hero_latte_art.png';
 import SignatureMenu from './components/SignatureMenu';
@@ -528,14 +541,24 @@ export default function App() {
             fontFamily: 'var(--font-mono)',
             color: '#C96E28'
           }}>
-            {/* Clickable Location */}
+            {/* Clickable Youtube */}
             <a
-              href="https://maps.google.com/?q=Warkop+1001cc+Bojonggede+Kemang+Bomang+Kalisuren"
+              href="https://www.youtube.com/@warkop1001cc"
               target="_blank"
               rel="noopener noreferrer"
               style={{ color: '#C96E28', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '6px' }}
             >
-              <MapPin size={14} color="#C96E28" /> Kalisuren, Tajur Halang
+              <YoutubeIcon size={14} color="#C96E28" /> @warkop1001cc
+            </a>
+
+            {/* Clickable Tiktok */}
+            <a
+              href="https://www.tiktok.com/@warkop1001cc"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: '#C96E28', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '6px' }}
+            >
+              <TikTokIcon size={14} color="#C96E28" /> @warkop1001cc
             </a>
 
             {/* Clickable Phone / WhatsApp */}
