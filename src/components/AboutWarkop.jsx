@@ -171,6 +171,111 @@ export default function AboutWarkop() {
             </div>
           </ScrollReveal>
 
+          {/* Unified 2-Column Master Card (Pemberdayaan UMKM) */}
+          <ScrollReveal variant="up" delay={150}>
+            <div
+              className="card-hover"
+              style={{
+                background: '#FFFFFF',
+                borderRadius: '20px',
+                border: '1px solid var(--border-card)',
+                boxShadow: '0 15px 35px rgba(0, 0, 0, 0.06)',
+                overflow: 'hidden',
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+                marginBottom: '28px'
+              }}
+            >
+              {/* Left Column: Content (Growing Together) */}
+              <div
+                style={{
+                  padding: 'clamp(20px, 4vw, 36px) clamp(18px, 4vw, 32px)',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'center'
+                }}
+              >
+                <div
+                  style={{
+                    fontSize: '0.78rem',
+                    fontFamily: 'var(--font-mono)',
+                    fontWeight: '700',
+                    color: 'var(--accent-copper)',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.08em',
+                    marginBottom: '8px'
+                  }}
+                >
+                  Tumbuh Bersama & Pemberdayaan
+                </div>
+                <h3
+                  style={{
+                    fontFamily: 'var(--font-serif)',
+                    fontSize: 'clamp(1.4rem, 3vw, 1.8rem)',
+                    color: 'var(--text-headline)',
+                    marginBottom: '14px',
+                    lineHeight: '1.25'
+                  }}
+                >
+                  Pemberdayaan UMKM & Warga Lokal
+                </h3>
+                <p style={{ fontSize: '0.94rem', color: 'var(--text-dark)', lineHeight: '1.7', marginBottom: '14px' }}>
+                  Warkop 1001cc hadir bukan hanya untuk menyajikan kopi, tetapi juga untuk tumbuh bersama. Kami percaya bahwa sebuah usaha akan lebih bermakna apabila manfaatnya dapat dirasakan oleh lebih banyak pihak. Karena itu, kami melibatkan para pelaku UMKM lokal dalam menghadirkan beragam menu di 1001cc, sekaligus membuka lapangan pekerjaan bagi warga Tajur Halang agar dapat merasakan manfaat dari kehadiran usaha ini.
+                </p>
+                <p style={{ fontSize: '0.94rem', color: 'var(--text-dark)', lineHeight: '1.7', marginBottom: 0 }}>
+                  Setiap cangkir kopi yang dinikmati dan setiap hidangan yang dipesan tidak hanya mendukung perjalanan 1001cc menuju mimpi 1.001 cabang, tetapi juga turut memperkuat usaha-usaha kecil yang menjadi penopang perekonomian serta memberikan kesempatan kerja bagi masyarakat sekitar. Bagi kami, keberhasilan bukan semata-mata diukur dari seberapa besar kami berkembang, melainkan dari seberapa banyak pihak yang dapat kami ajak maju bersama.
+                </p>
+              </div>
+
+              {/* Right Column: Highlighted Quote Block */}
+              <div
+                style={{
+                  background: 'radial-gradient(ellipse at 50% 50%, #4D2814 0%, #3E2312 60%, #2A1408 100%)',
+                  padding: 'clamp(24px, 5vw, 44px) clamp(20px, 5vw, 36px)',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  textAlign: 'center',
+                  color: '#FFFFFF',
+                  position: 'relative',
+                  minHeight: '280px'
+                }}
+              >
+                <div
+                  style={{
+                    fontFamily: 'var(--font-serif)',
+                    fontSize: '7rem',
+                    lineHeight: 1,
+                    color: 'rgba(201, 110, 40, 0.15)',
+                    position: 'absolute',
+                    top: '10px',
+                    left: '24px',
+                    userSelect: 'none',
+                    pointerEvents: 'none'
+                  }}
+                >
+                  “
+                </div>
+                <blockquote
+                  style={{
+                    fontFamily: 'var(--font-serif)',
+                    fontSize: 'clamp(1.05rem, 2.5vw, 1.25rem)',
+                    fontStyle: 'italic',
+                    lineHeight: '1.6',
+                    color: '#FAF6F0',
+                    zIndex: 1,
+                    maxWidth: '480px',
+                    margin: '0 auto',
+                    position: 'relative'
+                  }}
+                >
+                  "Di 1001cc, setiap pesanan bukan sekadar transaksi, melainkan bentuk dukungan nyata bagi mimpi para pelaku UMKM, kesempatan kerja bagi warga Tajur Halang, dan langkah bersama menuju masa depan yang lebih baik."
+                </blockquote>
+              </div>
+            </div>
+          </ScrollReveal>
+
           {/* Clean Compact Statistics Grid */}
           <ScrollReveal variant="up" delay={150} stagger>
             <div
