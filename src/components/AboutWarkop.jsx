@@ -230,14 +230,14 @@ export default function AboutWarkop() {
               {/* Right Column: Highlighted Quote Block */}
               <div
                 style={{
-                  background: 'radial-gradient(ellipse at 50% 50%, #4D2814 0%, #3E2312 60%, #2A1408 100%)',
+                  background: 'linear-gradient(135deg, #FFF5EC 0%, #F5D5B9 100%)',
                   padding: 'clamp(24px, 5vw, 44px) clamp(20px, 5vw, 36px)',
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'center',
                   alignItems: 'center',
                   textAlign: 'center',
-                  color: '#FFFFFF',
+                  color: 'var(--text-dark)',
                   position: 'relative',
                   minHeight: '280px'
                 }}
@@ -247,7 +247,7 @@ export default function AboutWarkop() {
                     fontFamily: 'var(--font-serif)',
                     fontSize: '7rem',
                     lineHeight: 1,
-                    color: 'rgba(201, 110, 40, 0.15)',
+                    color: 'rgba(201, 110, 40, 0.12)',
                     position: 'absolute',
                     top: '10px',
                     left: '24px',
@@ -263,7 +263,7 @@ export default function AboutWarkop() {
                     fontSize: 'clamp(1.05rem, 2.5vw, 1.25rem)',
                     fontStyle: 'italic',
                     lineHeight: '1.6',
-                    color: '#FAF6F0',
+                    color: 'var(--text-dark)',
                     zIndex: 1,
                     maxWidth: '480px',
                     margin: '0 auto',
