@@ -56,6 +56,104 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.25, rootMargin: '-10% 0px -50% 0px' });
 
   sections.forEach(sec => spyObserver.observe(sec));
+
+  // 4. Click to Zoom Event Flyer (Dynamic Lightbox)
+  document.querySelectorAll('.event-card img').forEach(img => {
+    img.addEventListener('click', () => {
+      const src = img.getAttribute('src');
+      const alt = img.getAttribute('alt') || 'Flyer Detail';
+      
+      // Create lightbox backdrop
+      const backdrop = document.createElement('div');
+      backdrop.className = 'lightbox-backdrop';
+      backdrop.style.cursor = 'zoom-out';
+      
+      // Create content container
+      const content = document.createElement('div');
+      content.className = 'lightbox-content';
+      content.style.position = 'relative';
+      content.style.width = 'auto';
+      content.style.maxWidth = '90%';
+      content.style.maxHeight = '90vh';
+      content.style.display = 'flex';
+      content.style.justifyContent = 'center';
+      content.style.alignItems = 'center';
+      
+      // Prevent closing when clicking the image itself
+      content.addEventListener('click', (e) => e.stopPropagation());
+      
+      // Create image element
+      const zoomImg = document.createElement('img');
+      zoomImg.setAttribute('src', src);
+      zoomImg.setAttribute('alt', alt);
+      zoomImg.className = 'lightbox-img-fade';
+      zoomImg.style.maxWidth = '100%';
+      zoomImg.style.maxHeight = '88vh';
+      zoomImg.style.borderRadius = '12px';
+      zoomImg.style.boxShadow = '0 20px 50px rgba(0,0,0,0.5)';
+      zoomImg.style.objectFit = 'contain';
+      
+      // Create close button
+      const closeBtn = document.createElement('button');
+      closeBtn.className = 'modal-close';
+      closeBtn.style.top = '-20px';
+      closeBtn.style.right = '-20px';
+      closeBtn.style.background = 'rgba(0,0,0,0.6)';
+      closeBtn.style.color = '#FFFFFF';
+      closeBtn.style.borderRadius = '50%';
+      closeBtn.style.width = '36px';
+      closeBtn.style.height = '36px';
+      closeBtn.style.display = 'flex';
+      closeBtn.style.alignItems = 'center';
+      closeBtn.style.justifyContent = 'center';
+      closeBtn.style.border = 'none';
+      closeBtn.style.cursor = 'pointer';
+      closeBtn.innerHTML = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" x2="6" y1="6" y2="18" /><line x1="6" x2="18" y1="6" y2="18" /></svg>`;
+      
+      closeBtn.addEventListener('click', () => {
+        backdrop.style.opacity = '0';
+        setTimeout(() => backdrop.remove(), 250);
+      });
+      
+      backdrop.addEventListener('click', () => {
+        backdrop.style.opacity = '0';
+        setTimeout(() => backdrop.remove(), 250);
+      });
+      
+      // Append children
+      content.appendChild(zoomImg);
+      content.appendChild(closeBtn);
+      backdrop.appendChild(content);
+      document.body.appendChild(backdrop);
+      document.body.style.overflow = 'hidden';
+      
+      // Handle ESC key to close
+      const escHandler = (e) => {
+        if (e.key === 'Escape') {
+          backdrop.style.opacity = '0';
+          setTimeout(() => {
+            backdrop.remove();
+            document.body.style.overflow = '';
+          }, 250);
+          document.removeEventListener('keydown', escHandler);
+        }
+      };
+      document.addEventListener('keydown', escHandler);
+      
+      // Cleanup overflow on remove
+      const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+          mutation.removedNodes.forEach((node) => {
+            if (node === backdrop) {
+              document.body.style.overflow = '';
+              observer.disconnect();
+            }
+          });
+        });
+      });
+      observer.observe(document.body, { childList: true });
+    });
+  });
 });
 
 // 3. Modals Management

@@ -802,4 +802,14 @@ nav .wrap {
     transform: none !important;
   }
 }
+
+/* Event Flyer Lightbox */
+.event-card img {
+  cursor: zoom-in;
+  transition: opacity 0.2s ease;
+}
+.event-card img:hover {
+  opacity: 0.95;
+}
+
 
