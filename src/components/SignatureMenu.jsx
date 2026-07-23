@@ -16,7 +16,7 @@ const DEFAULT_SIGNATURE_ITEMS = [
     id: 'kopi_cakra',
     tag: 'Best Seller #1',
     category: 'Signature Coffee #1',
-    name: 'Kopi Cakra Original',
+    name: 'Kopi Cakra',
     badgeText: 'Ngopi Sambil Nyoklat',
     headline: 'Kopi Cakra: Nikmati Sensasi Ngopi Sambil Nyoklat',
     descText: 'Di tengah berkembangnya budaya minum kopi, Kopi Cakra hadir sebagai signature coffee andalan 1001cc yang menawarkan pengalaman berbeda melalui konsep "Ngopi Sambil Nyoklat." Bukan sekadar mencampurkan kopi dan cokelat, Kopi Cakra menghadirkan perpaduan rasa yang harmonis—pahit khas kopi berpadu dengan manis lembut cokelat, menciptakan cita rasa yang kaya, seimbang, dan berkarakter dalam setiap tegukan.\n\nKeunikan Kopi Cakra terletak pada kemampuannya menghadirkan dua kenikmatan dalam satu cangkir.\n\nKopi Cakra — Ngopi Sambil Nyoklat.',

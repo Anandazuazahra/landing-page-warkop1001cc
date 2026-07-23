@@ -30,7 +30,7 @@ const DEFAULT_GALLERY_ITEMS = [
   },
   {
     id: 3,
-    title: 'Kopi Cakra Original (Ngopi Sambil Nyoklat)',
+    title: 'Kopi Cakra (Ngopi Sambil Nyoklat)',
     category: 'Signature Menu',
     image: kopiCakraGlassImg,
     location: 'Barista Station 1001cc',

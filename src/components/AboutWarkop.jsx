@@ -151,7 +151,7 @@ export default function AboutWarkop() {
                     alignItems: 'center',
                     gap: '6px'
                   }}>
-                    <Coffee size={14} color="var(--accent-copper)" /> Kopi Cakra Original
+                    <Coffee size={14} color="var(--accent-copper)" /> Kopi Cakra
                   </span>
                   <span style={{
                     background: 'var(--bg-cream)',
