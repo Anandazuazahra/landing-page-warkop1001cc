@@ -397,8 +397,8 @@ export default function App() {
                       <div className="feature-icon-box" style={{ background: 'rgba(201,124,62,0.15)', color: 'var(--accent-copper)', width: '48px', height: '48px', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px' }}>
                         <Coffee size={24} />
                       </div>
-                      <h3 style={{ fontSize: '1.25rem', marginBottom: '10px' }}>Signature Kopi Cakra</h3>
-                      <p style={{ color: 'var(--text-muted)', fontSize: '0.92rem' }}>Racikan es kopi susu signature legendaris 1001cc dengan sensasi rasa manis gurih cokelat yang khas dan pekat.</p>
+                      <h3 style={{ fontSize: '1.25rem', marginBottom: '10px' }}>Kopi Cakra Original</h3>
+                      <p style={{ color: 'var(--text-muted)', fontSize: '0.92rem' }}>Signature coffee andalan 1001cc dengan konsep "Ngopi Sambil Nyoklat." Perpaduan rasa pahit khas kopi robusta Dampit pilihan dan manis lembut cokelat pekat dalam setiap tegukan.</p>
                     </div>
                   </div>
                 </ScrollReveal>

@@ -179,11 +179,11 @@ export const DEFAULT_CMS_DATA = {
     },
     {
       id: 3,
-      title: 'Signature Kopi Cakra (Ngopi Sambil Nyoklat)',
+      title: 'Kopi Cakra Original (Ngopi Sambil Nyoklat)',
       category: 'Signature Menu',
       image: kopiCakraGlassImg,
       location: 'Barista Station 1001cc',
-      desc: 'Sensasi unik es kopi susu racikan rahasia 1001cc dipadu dengan rasa pahit manis cokelat pekat.'
+      desc: 'Signature coffee andalan 1001cc dengan konsep "Ngopi Sambil Nyoklat." Perpaduan rasa pahit khas kopi robusta Dampit pilihan dan manis lembut cokelat pekat dalam setiap tegukan.'
     },
     {
       id: 4,
