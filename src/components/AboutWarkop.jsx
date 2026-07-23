@@ -217,13 +217,19 @@ export default function AboutWarkop() {
                     lineHeight: '1.25'
                   }}
                 >
-                  Pemberdayaan UMKM & Warga Lokal
+                  Lebih dari Sekadar Warkop
                 </h3>
-                <p style={{ fontSize: '0.94rem', color: 'var(--text-dark)', lineHeight: '1.7', marginBottom: '14px' }}>
-                  Warkop 1001cc hadir bukan hanya untuk menyajikan kopi, tetapi juga untuk tumbuh bersama. Kami percaya bahwa sebuah usaha akan lebih bermakna apabila manfaatnya dapat dirasakan oleh lebih banyak pihak. Karena itu, kami melibatkan para pelaku UMKM lokal dalam menghadirkan beragam menu di 1001cc, sekaligus membuka lapangan pekerjaan bagi warga Tajur Halang agar dapat merasakan manfaat dari kehadiran usaha ini.
+                <p style={{ fontSize: '0.94rem', color: 'var(--text-dark)', lineHeight: '1.7', marginBottom: '12px' }}>
+                  Warkop 1001cc hadir bukan hanya untuk menyajikan kopi dan makanan, tetapi juga untuk tumbuh bersama masyarakat.
                 </p>
-                <p style={{ fontSize: '0.94rem', color: 'var(--text-dark)', lineHeight: '1.7', marginBottom: 0 }}>
-                  Setiap cangkir kopi yang dinikmati dan setiap hidangan yang dipesan tidak hanya mendukung perjalanan 1001cc menuju mimpi 1.001 cabang, tetapi juga turut memperkuat usaha-usaha kecil yang menjadi penopang perekonomian serta memberikan kesempatan kerja bagi masyarakat sekitar. Bagi kami, keberhasilan bukan semata-mata diukur dari seberapa besar kami berkembang, melainkan dari seberapa banyak pihak yang dapat kami ajak maju bersama.
+                <p style={{ fontSize: '0.94rem', color: 'var(--text-dark)', lineHeight: '1.7', marginBottom: '12px' }}>
+                  Kami bekerja sama dengan pelaku UMKM lokal dan membuka kesempatan kerja bagi warga Tajur Halang agar manfaat dari usaha ini dapat dirasakan oleh lebih banyak orang.
+                </p>
+                <p style={{ fontSize: '0.94rem', color: 'var(--text-dark)', lineHeight: '1.7', marginBottom: '16px' }}>
+                  Setiap kopi yang Anda nikmati dan setiap menu yang Anda pesan bukan sekadar transaksi, tetapi juga bentuk dukungan bagi UMKM lokal, kesempatan kerja bagi masyarakat sekitar, dan langkah kecil untuk membangun ekonomi bersama.
+                </p>
+                <p style={{ fontSize: '0.94rem', color: 'var(--accent-copper)', lineHeight: '1.7', fontStyle: 'italic', fontWeight: 600, marginBottom: 0 }}>
+                  Karena bagi kami, ketika pelanggan datang, bukan hanya usaha kami yang tumbuh, tetapi juga banyak orang yang ikut berkembang bersama.
                 </p>
               </div>
 
