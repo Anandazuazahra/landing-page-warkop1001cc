@@ -42,8 +42,8 @@ const TikTokIcon = ({ size = 14, color = "#C96E28" }) => (
   </svg>
 );
 
-import logoImg from './assets/logo.png';
-import heroLatteImg from './assets/hero_latte_art.png';
+import logoImg from './assets/logo.webp';
+import heroLatteImg from './assets/hero_latte_art.webp';
 import SignatureMenu from './components/SignatureMenu';
 import AboutWarkop from './components/AboutWarkop';
 import Articles from './components/Articles';
@@ -56,8 +56,8 @@ import AdminCMSModal from './components/AdminCMSModal';
 import { useCMSData } from './cms/cmsStore';
 import { Settings, Lock } from 'lucide-react';
 
-import mapImg from './assets/warkop_map.png';
-import berandaWarkopPhotoImg from './assets/beranda_warkop_photo.jpg';
+import mapImg from './assets/warkop_map.webp';
+import berandaWarkopPhotoImg from './assets/beranda_warkop_photo.webp';
 
 export default function App() {
   const { cmsData } = useCMSData();

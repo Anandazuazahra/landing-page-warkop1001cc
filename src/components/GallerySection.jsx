@@ -3,13 +3,13 @@ import { Sparkles, Eye, X, ChevronLeft, ChevronRight, MapPin, Camera } from 'luc
 import ScrollReveal from './ScrollReveal';
 import { useCMSData } from '../cms/cmsStore';
 
-import warkopPhotoImg from '../assets/warkop_photo.jpg';
-import berandaWarkopPhotoImg from '../assets/beranda_warkop_photo.jpg';
-import kopiCakraGlassImg from '../assets/kopi_cakra_glass.png';
-import matchaCakraGlassImg from '../assets/matcha_cakra_glass.png';
-import heroLatteImg from '../assets/hero_latte_art.png';
-import eventSayembaraImg from '../assets/event_sayembara_kreator.jpg';
-import eventKaraokeImg from '../assets/event_lomba_karaoke.jpg';
+import warkopPhotoImg from '../assets/warkop_photo.webp';
+import berandaWarkopPhotoImg from '../assets/beranda_warkop_photo.webp';
+import kopiCakraGlassImg from '../assets/kopi_cakra_glass.webp';
+import matchaCakraGlassImg from '../assets/matcha_cakra_glass.webp';
+import heroLatteImg from '../assets/hero_latte_art.webp';
+import eventSayembaraImg from '../assets/event_sayembara_kreator.webp';
+import eventKaraokeImg from '../assets/event_lomba_karaoke.webp';
 
 const DEFAULT_GALLERY_ITEMS = [
   {

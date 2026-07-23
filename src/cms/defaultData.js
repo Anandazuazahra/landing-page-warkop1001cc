@@ -1,15 +1,15 @@
-import kopiCakraGlassImg from '../assets/kopi_cakra_glass.png';
-import matchaCakraGlassImg from '../assets/matcha_cakra_glass.png';
-import matchaSplashImg from '../assets/matcha_splash.png';
-import floatingBeansImg from '../assets/floating_coffee_beans.png';
-import floatingChocolateImg from '../assets/floating_chocolate.png';
-import heroLatteImg from '../assets/hero_latte_art.png';
+import kopiCakraGlassImg from '../assets/kopi_cakra_glass.webp';
+import matchaCakraGlassImg from '../assets/matcha_cakra_glass.webp';
+import matchaSplashImg from '../assets/matcha_splash.webp';
+import floatingBeansImg from '../assets/floating_coffee_beans.webp';
+import floatingChocolateImg from '../assets/floating_chocolate.webp';
+import heroLatteImg from '../assets/hero_latte_art.webp';
 
-import eventSayembaraImg from '../assets/event_sayembara_kreator.jpg';
-import eventKaraokeImg from '../assets/event_lomba_karaoke.jpg';
+import eventSayembaraImg from '../assets/event_sayembara_kreator.webp';
+import eventKaraokeImg from '../assets/event_lomba_karaoke.webp';
 
-import warkopPhotoImg from '../assets/warkop_photo.jpg';
-import berandaWarkopPhotoImg from '../assets/beranda_warkop_photo.jpg';
+import warkopPhotoImg from '../assets/warkop_photo.webp';
+import berandaWarkopPhotoImg from '../assets/beranda_warkop_photo.webp';
 
 export const DEFAULT_CMS_DATA = {
   siteInfo: {

@@ -3,11 +3,11 @@ import { ChevronLeft, ChevronRight, Sparkles, Flame, Coffee } from 'lucide-react
 import { motion, AnimatePresence } from 'framer-motion';
 import ScrollReveal from './ScrollReveal';
 
-import kopiCakraGlassImg from '../assets/kopi_cakra_glass.png';
-import matchaCakraGlassImg from '../assets/matcha_cakra_glass.png';
-import matchaSplashImg from '../assets/matcha_splash.png';
-import floatingBeansImg from '../assets/floating_coffee_beans.png';
-import floatingChocolateImg from '../assets/floating_chocolate.png';
+import kopiCakraGlassImg from '../assets/kopi_cakra_glass.webp';
+import matchaCakraGlassImg from '../assets/matcha_cakra_glass.webp';
+import matchaSplashImg from '../assets/matcha_splash.webp';
+import floatingBeansImg from '../assets/floating_coffee_beans.webp';
+import floatingChocolateImg from '../assets/floating_chocolate.webp';
 
 import { useCMSData } from '../cms/cmsStore';
 

@@ -8,7 +8,7 @@ const DEFAULT_ARTICLES = [
     title: 'Kisah di Balik Kopi Cakra: Resep Legendaris Warkop Naik Kelas',
     category: 'Kisah Rasa',
     time: '3 mnt baca',
-    image: '/kopi_cakra.jpg',
+    image: '/kopi_cakra.webp',
     date: '14 Juli 2026',
     excerpt: 'Bagaimana segelas kopi susu bisa merubah definisi nongkrong di warkop? Mari telusuri perjalanan lahirnya Kopi Cakra yang legendaris.',
     content: (
@@ -26,7 +26,7 @@ const DEFAULT_ARTICLES = [
     title: 'Kopi Matcha Cakra: Ketika Kultur Jepang Bertemu Tradisi Warkop',
     category: 'Inovasi Menu',
     time: '3 mnt baca',
-    image: '/kopi_matcha_cakra.jpg',
+    image: '/kopi_matcha_cakra.webp',
     date: '14 Juli 2026',
     excerpt: 'Perpaduan berani antara pahit gurihnya teh hijau matcha asli Jepang dengan espreso robusta lokal yang pekat khas Cakra.',
     content: (
@@ -43,7 +43,7 @@ const DEFAULT_ARTICLES = [
     title: 'Rahasia Bahan Baku Utama di Balik Cita Rasa Menu Cakra',
     category: 'Kualitas Menu',
     time: '2 mnt baca',
-    image: '/kopi_cakra.jpg',
+    image: '/kopi_cakra.webp',
     date: '14 Juli 2026',
     excerpt: 'Dari mana asal biji kopi robusta tebal dan bubuk matcha premium yang kami gunakan? Intip rahasia dapur kami di sini.',
     content: (

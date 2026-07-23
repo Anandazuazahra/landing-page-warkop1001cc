@@ -1,6 +1,6 @@
 import React from 'react';
 import { Coffee, Clock, MapPin, Users, Star, Calendar } from 'lucide-react';
-import warkopPhotoImg from '../assets/warkop_photo.jpg';
+import warkopPhotoImg from '../assets/warkop_photo.webp';
 import ScrollReveal from './ScrollReveal';
 import AnimatedCounter from './AnimatedCounter';
 import { useCMSData } from '../cms/cmsStore';

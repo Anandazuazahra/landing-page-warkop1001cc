@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Calendar, MapPin, Ticket, X, Eye } from 'lucide-react';
-import eventSayembaraImg from '../assets/event_sayembara_kreator.jpg';
-import eventKaraokeImg from '../assets/event_lomba_karaoke.jpg';
+import eventSayembaraImg from '../assets/event_sayembara_kreator.webp';
+import eventKaraokeImg from '../assets/event_lomba_karaoke.webp';
 import ScrollReveal from './ScrollReveal';
 
 import { useCMSData } from '../cms/cmsStore';
