@@ -292,7 +292,7 @@ export default function App() {
           </a>
 
           <a
-            href={`https://wa.me/${siteInfo.waNumberRaw || '6288289277876'}?text=Halo%20Warkop%201001cc%2C%20saya%20ingin%20reservasi%20tempat`}
+            href={`https://wa.me/${siteInfo.waNumberRaw || '6288289277876'}?text=Halo%20Warkop%201001cc%2C%20saya%20ingin%20reservasi%20tempat%20di%20warkop%201001cc`}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary"
@@ -325,7 +325,7 @@ export default function App() {
 
                     <div className="hero-actions">
                       <a
-                        href={`https://wa.me/${siteInfo.waNumberRaw || '6288289277876'}?text=Halo%20Warkop%201001cc%2C%20saya%20ingin%20reservasi%20tempat`}
+                        href={`https://wa.me/${siteInfo.waNumberRaw || '6288289277876'}?text=Halo%20Warkop%201001cc%2C%20saya%20ingin%20reservasi%20tempat%20di%20warkop%201001cc`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="btn-primary"

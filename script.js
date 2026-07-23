@@ -189,3 +189,16 @@ window.handleReservationSubmit = function(event) {
   
   window.open(`https://wa.me/${waNumberRaw}?text=${encodeURIComponent(waMessage)}`, '_blank');
 };
+
+// 5. Direct WhatsApp Redirection Functions
+const WA_NUMBER = '6288289277876';
+
+window.redirectToWhatsAppReservation = function() {
+  const message = 'Halo Warkop 1001cc, saya ingin reservasi tempat di warkop 1001cc';
+  window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
+};
+
+window.redirectToWhatsAppEvent = function(eventName) {
+  const message = `Halo Warkop 1001cc, saya ingin mengikuti event ini: ${eventName}`;
+  window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
+};

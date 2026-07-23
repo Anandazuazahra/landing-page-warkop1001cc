@@ -208,7 +208,7 @@ export default function Events() {
                     </button>
                   ) : (
                     <a
-                      href="https://wa.me/6288289277876?text=Halo%20Warkop%201001cc%2C%20saya%20ingin%20reservasi%20spot%20event"
+                      href={`https://wa.me/6288289277876?text=${encodeURIComponent(`Halo Warkop 1001cc, saya ingin mengikuti event ini: ${evt.title}`)}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="btn-primary"
