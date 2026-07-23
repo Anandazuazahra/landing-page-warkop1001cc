@@ -1,654 +1,1074 @@
 <!doctype html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Warkop 1001cc — Rumah Bagi Setiap Cerita | Warkop 24 Jam</title>
-    <meta name="description" content="Warkop 1001cc adalah tempat nongkrong hangat 24 jam dengan Kopi Cakra pilihan, makanan favorit, dan ruang kolaborasi nyaman di Bojonggede, Kalisuren & Bomang." />
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Space+Mono:wght@400;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Custom Style Sheet -->
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- Toast Notification Container -->
-    <div id="toast-container" style="position: fixed; bottom: 20px; right: 20px; left: 20px; z-index: 9999; display: flex; flex-direction: column; gap: 10px; maxWidth: 380px; margin: 0 auto;"></div>
 
-    <!-- Top Navbar -->
-    <nav>
-      <div class="wrap">
-        <a href="#hero-section" class="brand">
-          <img src="./assets/logo.png" alt="Warkop 1001cc Logo" style="width: 32px; height: 32px; object-fit: contain;" />
-          <span>Warkop 1001cc</span>
-        </a>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Warkop 1001cc — Rumah Bagi Setiap Cerita | Warkop 24 Jam</title>
+  <meta name="description"
+    content="Warkop 1001cc adalah tempat nongkrong hangat 24 jam dengan Kopi Cakra pilihan, makanan favorit, dan ruang kolaborasi nyaman di Bojonggede, Kalisuren & Bomang." />
 
-        <!-- Desktop Navigation Links -->
-        <div class="navlinks">
-          <a href="#hero-section">Beranda</a>
-          <a href="#about-section">Tentang Warkop</a>
-          <a href="#signature-section">Menu Signature</a>
-          <a href="#event-section">Event</a>
-          <a href="#testimoni-section">Testimoni</a>
-        </div>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Space+Mono:wght@400;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
 
-        <!-- Mobile Hamburger Menu Toggle Button -->
-        <button id="mobile-menu-burger" class="mobile-menu-toggle" aria-label="Buka Menu Navigasi">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
-        </button>
+  <!-- Custom Style Sheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Toast Notification Container -->
+  <div id="toast-container"
+    style="position: fixed; bottom: 20px; right: 20px; left: 20px; z-index: 9999; display: flex; flex-direction: column; gap: 10px; maxWidth: 380px; margin: 0 auto;">
+  </div>
+
+  <!-- Top Navbar -->
+  <nav>
+    <div class="wrap">
+      <a href="#hero-section" class="brand">
+        <img src="./assets/logo.png" alt="Warkop 1001cc Logo" style="width: 32px; height: 32px; object-fit: contain;" />
+        <span>Warkop 1001cc</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <div class="navlinks">
+        <a href="#hero-section">Beranda</a>
+        <a href="#about-section">Tentang Warkop</a>
+        <a href="#signature-section">Menu Signature</a>
+        <a href="#event-section">Event</a>
+        <a href="#testimoni-section">Testimoni</a>
       </div>
 
-      <!-- Mobile Navigation Drawer -->
-      <div id="mobile-nav-drawer-menu" class="mobile-nav-drawer">
-        <a href="#hero-section" class="mobile-nav-link">
-          <span>Beranda</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" x2="19" y1="12" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-        <a href="#about-section" class="mobile-nav-link">
-          <span>Tentang Warkop</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" x2="19" y1="12" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-        <a href="#signature-section" class="mobile-nav-link">
-          <span>Menu Signature</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" x2="19" y1="12" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-        <a href="#event-section" class="mobile-nav-link">
-          <span>Event & Kegiatan</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" x2="19" y1="12" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-        <a href="#testimoni-section" class="mobile-nav-link">
-          <span>Testimoni Google</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" x2="19" y1="12" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-        <button onclick="openReservationModal()" class="btn-primary" style="width: 100%; justify-content: center; margin-top: 12px; padding: 12px; text-decoration: none;">
-          Reservasi Tempat WA <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" x2="19" y1="12" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </button>
-      </div>
-    </nav>
-
-    <!-- Main Content Area -->
-    <main>
-      <!-- 1. Hero Section (Beranda) -->
-      <section class="hero" id="hero-section">
-        <div class="wrap hero-grid">
-          <div class="reveal-init">
-            <div class="eyebrow">Warkop & Ruang Kolaborasi</div>
-            <h1>
-              Tempat Nongkrong Hangat,
-              <br class="hero-br" />
-              <em>Kopi Terbaik Setiap Saat.</em>
-            </h1>
-            <p class="lead">
-              Nikmati kopi nusantara pilihan, makanan favorit, dan suasana nyaman untuk bekerja, berdiskusi, maupun bersantai bersama teman.
-            </p>
-
-            <div class="hero-actions">
-              <button onclick="openReservationModal()" class="btn-primary">
-                Reservasi Tempat <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="btn-icon"><line x1="5" x2="19" y1="12" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-              </button>
-              <a href="#signature-section" class="btn-ghost">
-                Lihat Menu Khas <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="btn-icon"><line x1="5" x2="19" y1="12" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-              </a>
-            </div>
-          </div>
-
-          <!-- Polaroid Card -->
-          <div class="reveal-init" style="transition-delay: 150ms;">
-            <div class="hero-photo-wrap">
-              <div class="polaroid-card">
-                <div class="polaroid-img-box">
-                  <img src="./assets/beranda_warkop_photo.jpg" alt="Warkop 1001cc photo" class="polaroid-img" />
-                </div>
-                <div class="polaroid-caption">Warkop 1001cc — Buka 24 Jam</div>
-                <div class="polaroid-sub">Bojonggede - Kemang (Bomang), Kalisuren</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Features Section -->
-      <section class="section" id="fitur-section">
-        <div class="wrap">
-          <div class="reveal-init">
-            <div class="section-head">
-              <div class="eyebrow">Mengapa Memilih Kami?</div>
-              <h2>Kenyamanan dan Rasa dalam Satu Tempat</h2>
-              <p>Kami merancang ruang dan produk kami agar setiap kunjungan Anda menjadi momen produktif dan menyenangkan.</p>
-            </div>
-          </div>
-
-          <div class="reveal-init" style="transition-delay: 100ms;">
-            <div class="features-grid">
-              <div class="feature-card">
-                <div class="feature-icon-box" style="background: rgba(201,124,62,0.15); color: var(--accent-copper); width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h.01"/><path d="M8.5 16.5a5 5 0 0 1 7 0"/><path d="M5 13a10 10 0 0 1 14 0"/><path d="M1.5 9.5a15 15 0 0 1 21 0"/></svg>
-                </div>
-                <h3 style="font-size: 1.25rem; margin-bottom: 10px;">Ruang Kerja Nyaman</h3>
-                <p style="color: var(--text-muted); font-size: 0.92rem;">Dilengkapi Wi-Fi kencang, AC dingin, dan suasana tenang yang cocok untuk bersantai maupun Work From Cafe (WFC).</p>
-              </div>
-
-              <div class="feature-card">
-                <div class="feature-icon-box" style="background: rgba(201,124,62,0.15); color: var(--accent-copper); width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                </div>
-                <h3 style="font-size: 1.25rem; margin-bottom: 10px;">Buka 24 Jam Non-Stop</h3>
-                <p style="color: var(--text-muted); font-size: 0.92rem;">Siap melayani kebutuhan kopi & camilan hangat Anda kapan pun, baik siang hari maupun larut malam tanpa antrean.</p>
-              </div>
-
-              <div class="feature-card">
-                <div class="feature-icon-box" style="background: rgba(201,124,62,0.15); color: var(--accent-copper); width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v2"/><path d="M14 2v2"/><path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h12Z"/><path d="M6 2v2"/><path d="M17 12h1a3 3 0 0 1 3 3v1a3 3 0 0 1-3 3h-1"/></svg>
-                </div>
-                <h3 style="font-size: 1.25rem; margin-bottom: 10px;">Signature Kopi Cakra</h3>
-                <p style="color: var(--text-muted); font-size: 0.92rem;">Racikan es kopi susu signature legendaris 1001cc dengan sensasi rasa manis gurih cokelat yang khas dan pekat.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 2. Tentang Warkop Section -->
-      <section class="section" id="about-section">
-        <div class="wrap">
-          <div class="reveal-init">
-            <div class="section-head" style="margin-bottom: 32px;">
-              <h2 style="font-size: clamp(2.2rem, 4vw, 3rem);">Tentang Warkop 1001cc</h2>
-              <p style="max-width: 640px; margin: 10px auto 0;">
-                Rumah bagi setiap cerita — tempat bertemunya kehangatan kopi, inspirasi, dan kebersamaan 24 jam non-stop.
-              </p>
-            </div>
-          </div>
-
-          <!-- About Details Card -->
-          <div class="reveal-init" style="transition-delay: 100ms;">
-            <div class="card-hover" style="background: #FFFFFF; border-radius: 20px; border: 1px solid var(--border-card); box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06); overflow: hidden; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin-bottom: 36px;">
-              <!-- Real photo column -->
-              <div style="position: relative; min-height: clamp(220px, 35vw, 360px);">
-                <img src="./assets/warkop_photo.jpg" alt="Warkop 1001cc" style="width: 100%; height: 100%; min-height: clamp(220px, 35vw, 360px); object-fit: cover; display: block;" />
-                <div style="position: absolute; bottom: 12px; left: 12px; right: 12px; background: rgba(255, 255, 255, 0.94); backdrop-filter: blur(8px); padding: 10px 14px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.6); display: flex; align-items: center; gap: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.12);">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-copper)" stroke-width="2" style="flex-shrink: 0;"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-                  <span style="font-size: 0.82rem; font-weight: 700; color: var(--text-dark);">Bojonggede - Kemang (Bomang), Kalisuren</span>
-                </div>
-              </div>
-
-              <!-- Content column -->
-              <div style="padding: clamp(20px, 4vw, 36px) clamp(18px, 4vw, 32px); display: flex; flex-direction: column; justify-content: center;">
-                <div style="font-size: 0.78rem; font-family: var(--font-mono); font-weight: 700; color: var(--accent-copper); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px;">
-                  Berdiri Sejak 20 September 2025
-                </div>
-                <h3 style="font-family: var(--font-serif); font-size: clamp(1.4rem, 3vw, 1.8rem); color: var(--text-headline); margin-bottom: 14px; line-height: 1.25;">Sejarah Singkat Warkop 1001cc</h3>
-                <p style="font-size: 0.94rem; color: var(--text-dark); line-height: 1.7; margin-bottom: 14px;">
-                  Warkop 1001cc resmi berdiri pada 20 September 2025. Berawal dari kebiasaan tim yang sering berkumpul, berdiskusi, dan menikmati kopi di berbagai kafe, muncul sebuah ide sederhana: mengapa tidak membangun tempat nongkrong sendiri?
-                </p>
-                <p style="font-size: 0.94rem; color: var(--text-dark); line-height: 1.7; margin-bottom: 20px;">
-                  Melihat masih terbatasnya tempat yang buka selama 24 jam, lahirlah Warkop 1001cc sebagai warkop yang nyaman, buka 24 jam, dan menjadi tempat berkumpul, bekerja, maupun bersantai kapan saja. Dengan menghadirkan kopi berkualitas dan suasana yang hangat, 1001cc hadir untuk menjadi rumah bagi setiap cerita dan pertemuan.
-                </p>
-
-                <!-- highlights -->
-                <div style="display: flex; gap: 8px; flex-wrap: wrap; padding-top: 16px; border-top: 1px solid var(--border-light);">
-                  <span style="background: var(--bg-cream); padding: 6px 12px; border-radius: 10px; font-size: 0.8rem; font-weight: 700; color: var(--text-dark); display: inline-flex; align-items: center; gap: 6px;">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-copper)" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Buka 24 Jam Non-Stop
-                  </span>
-                  <span style="background: var(--bg-cream); padding: 6px 12px; border-radius: 10px; font-size: 0.8rem; font-weight: 700; color: var(--text-dark); display: inline-flex; align-items: center; gap: 6px;">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-copper)" stroke-width="2"><path d="M12 20h.01"/><path d="M8.5 16.5a5 5 0 0 1 7 0"/><path d="M5 13a10 10 0 0 1 14 0"/><path d="M1.5 9.5a15 15 0 0 1 21 0"/></svg> Akses Wi-Fi Gratis
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 3. Signature Menu Section -->
-      <section class="section" id="signature-section">
-        <div class="wrap">
-          <div class="reveal-init">
-            <div class="section-head" style="margin-bottom: 36px;">
-              <div class="eyebrow">Menu Signature Kami</div>
-              <h2>Menu Spesial Warkop 1001cc</h2>
-              <p>Rasakan kelezatan kopi racikan barista kami dengan biji kopi pilihan nusantara.</p>
-            </div>
-          </div>
-
-          <!-- Showcase Grid for Signature Menus -->
-          <div class="reveal-init" style="transition-delay: 100ms;">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
-              
-              <!-- Kopi Cakra Banner Card -->
-              <div style="background: radial-gradient(ellipse at 50% 50%, #4D2814 0%, #351A0C 55%, #1C0C05 100%); overflow: hidden; padding: 40px 24px; min-height: 480px; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 15px 35px rgba(0,0,0,0.3); border-radius: 20px; position: relative;">
-                <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; pointer-events: none; overflow: hidden; z-index: 0;">
-                  <div style="font-family: var(--font-serif); font-size: 8rem; font-weight: 900; color: rgba(255,255,255,0.03); letter-spacing: 0.05em; text-transform: uppercase; user-select: none;">CAKRA</div>
-                </div>
-                <div style="position: absolute; width: 100%; height: 100%; pointer-events: none; z-index: 2; display: flex; align-items: center; justify-content: center; transform: translateY(-40px);">
-                  <img src="./assets/kopi_cakra_glass.png" alt="Kopi Cakra Original" style="height: 280px; object-fit: contain; filter: drop-shadow(0 15px 25px rgba(0,0,0,0.5));" />
-                  <img src="./assets/floating_coffee_beans.png" style="position: absolute; width: 115px; left: 22%; top: 18%; transform: rotate(15deg); opacity: 0.35;" />
-                  <img src="./assets/floating_chocolate.png" style="position: absolute; width: 140px; right: 18%; top: 35%; transform: rotate(-15deg); opacity: 0.35;" />
-                </div>
-                <div style="z-index: 3; color: #FFFFFF; text-align: center; max-width: 100%; margin-top: auto; padding-top: 220px;">
-                  <span style="font-family: var(--font-mono); font-size: 0.7rem; font-weight: 800; text-transform: uppercase; background: #C96E28; padding: 4px 10px; border-radius: 20px; margin-bottom: 10px; display: inline-block;">Best Seller #1</span>
-                  <h3 style="font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; color: #FFF; margin-bottom: 8px;">Kopi Cakra Original</h3>
-                  <p style="font-size: 0.85rem; line-height: 1.5; color: rgba(255,255,255,0.85);">
-                    Signature coffee andalan 1001cc dengan konsep "Ngopi Sambil Nyoklat." Perpaduan rasa pahit khas kopi robusta Dampit pilihan dan manis lembut cokelat pekat dalam setiap tegukan.
-                  </p>
-                </div>
-              </div>
-
-              <!-- Matcha Cakra Banner Card -->
-              <div style="background: radial-gradient(ellipse at 50% 50%, #25441B 0%, #183011 55%, #0B1907 100%); overflow: hidden; padding: 40px 24px; min-height: 480px; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 15px 35px rgba(0,0,0,0.3); border-radius: 20px; position: relative;">
-                <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; pointer-events: none; overflow: hidden; z-index: 0;">
-                  <div style="font-family: var(--font-serif); font-size: 8rem; font-weight: 900; color: rgba(255,255,255,0.03); letter-spacing: 0.05em; text-transform: uppercase; user-select: none;">MATCHA</div>
-                </div>
-                <div style="position: absolute; width: 100%; height: 100%; pointer-events: none; z-index: 2; display: flex; align-items: center; justify-content: center; transform: translateY(-40px);">
-                  <img src="./assets/matcha_cakra_glass.png" alt="Cakra Matcha Latte" style="height: 280px; object-fit: contain; filter: drop-shadow(0 15px 25px rgba(0,0,0,0.5));" />
-                  <img src="./assets/floating_coffee_beans.png" style="position: absolute; width: 115px; left: 22%; top: 18%; transform: rotate(15deg); opacity: 0.35;" />
-                  <img src="./assets/matcha_splash.png" style="position: absolute; width: 140px; right: 18%; top: 35%; transform: rotate(-15deg); opacity: 0.35;" />
-                </div>
-                <div style="z-index: 3; color: #FFFFFF; text-align: center; max-width: 100%; margin-top: auto; padding-top: 220px;">
-                  <span style="font-family: var(--font-mono); font-size: 0.7rem; font-weight: 800; text-transform: uppercase; background: #558b2f; padding: 4px 10px; border-radius: 20px; margin-bottom: 10px; display: inline-block;">Trending Inovasi</span>
-                  <h3 style="font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; color: #FFF; margin-bottom: 8px;">Cakra Matcha Latte</h3>
-                  <p style="font-size: 0.85rem; line-height: 1.5; color: rgba(255,255,255,0.85);">
-                    Showcase non-coffee premium dari 1001cc. Memadukan keharuman teh hijau matcha jepang asli pilihan dengan kelembutan susu gurih yang creamy dan segar.
-                  </p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          <!-- Elegant Description Cards below the Showcase -->
-          <div class="reveal-init" style="transition-delay: 150ms; margin-top: 36px;">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; max-width: 1100px; margin: 30px auto 0;">
-              
-              <!-- Kopi Cakra Details Card -->
-              <div style="background: #FFFFFF; border-radius: 20px; border: 1px solid var(--border-card); box-shadow: 0 12px 36px rgba(44, 24, 11, 0.05); padding: 30px 24px; display: flex; flex-direction: column; justify-content: flex-start;">
-                <h3 style="font-family: var(--font-serif); font-size: 1.35rem; color: var(--text-headline); margin-bottom: 16px; line-height: 1.3;">
-                  Kopi Cakra: Nikmati Sensasi Ngopi Sambil Nyoklat
-                </h3>
-                <div style="color: var(--text-dark); font-size: 0.92rem; line-height: 1.7;">
-                  <p style="margin-bottom: 12px;">
-                    Di tengah berkembangnya budaya minum kopi, Kopi Cakra hadir sebagai signature coffee andalan 1001cc yang menawarkan pengalaman berbeda melalui konsep <strong>"Ngopi Sambil Nyoklat."</strong>
-                  </p>
-                  <p style="margin-bottom: 12px;">
-                    Bukan sekadar mencampurkan kopi dan cokelat, Kopi Cakra menghadirkan perpaduan rasa yang harmonis—pahit khas kopi berpadu dengan manis lembut cokelat, menciptakan cita rasa yang kaya, seimbang, dan berkarakter dalam setiap tegukan.
-                  </p>
-                  <p>
-                    Keunikan Kopi Cakra terletak pada kemampuannya menghadirkan dua kenikmatan dalam satu cangkir.
-                  </p>
-                </div>
-              </div>
-
-              <!-- Matcha Cakra Details Card -->
-              <div style="background: #FFFFFF; border-radius: 20px; border: 1px solid var(--border-card); box-shadow: 0 12px 36px rgba(44, 24, 11, 0.05); padding: 30px 24px; display: flex; flex-direction: column; justify-content: flex-start;">
-                <h3 style="font-family: var(--font-serif); font-size: 1.35rem; color: var(--text-headline); margin-bottom: 16px; line-height: 1.3;">
-                  Cakra Matcha Latte: Nikmati Kesegaran Matcha dalam Setiap Tegukan
-                </h3>
-                <div style="color: var(--text-dark); font-size: 0.92rem; line-height: 1.7;">
-                  <p style="margin-bottom: 12px;">
-                    Cakra Matcha Latte merupakan signature non-coffee dari 1001cc yang memadukan matcha berkualitas dengan susu creamy untuk menghasilkan rasa yang lembut, segar, dan nikmat.
-                  </p>
-                  <p>
-                    Memadukan keharuman teh hijau matcha jepang asli pilihan dengan kelembutan susu gurih yang creamy dan segar untuk menyemangati hari Anda.
-                  </p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 4. Events Section -->
-      <section class="section" id="event-section">
-        <div class="wrap">
-          <div class="reveal-init">
-            <div style="margin-bottom: 28px;">
-              <div class="eyebrow">Agenda & Komunitas</div>
-              <h2 style="font-size: clamp(2.2rem, 4vw, 3rem); margin-bottom: 12px;">Event & Kegiatan Seru di <em>Warkop 1001cc</em></h2>
-              <p class="lead" style="max-width: 640px;">
-                Dari lomba kreatif, karaoke gembira, live music akustik, hingga workshop edukasi — intip dokumentasi event seru dan agenda mendatang kami.
-              </p>
-            </div>
-          </div>
-
-          <!-- Events Grid -->
-          <div class="reveal-init" style="transition-delay: 100ms;">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
-              
-              <!-- Event 1 -->
-              <div class="event-card" style="background: #FFFFFF; border-radius: 16px; overflow: hidden; border: 1px solid #E5DCD0; box-shadow: 0 10px 30px rgba(28, 19, 13, 0.06); display: flex; flex-direction: column;">
-                <div class="img-zoom-box" style="position: relative; height: 240px; overflow: hidden; background: #25150B;">
-                  <img src="./assets/event_sayembara_kreator.jpg" alt="Sayembara Kreator 1001CC" style="width: 100%; height: 100%; object-fit: cover; object-position: top center;" />
-                  <span style="position: absolute; top: 14px; left: 14px; background: #C96E28; color: #FFFFFF; font-size: 0.75rem; font-weight: 800; padding: 4px 12px; border-radius: 20px; font-family: 'Space Mono', monospace; box-shadow: 0 4px 10px rgba(0,0,0,0.4);">S/D 5 AGUSTUS 2026</span>
-                </div>
-                <div style="padding: 22px; display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
-                  <div>
-                    <span style="font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700; color: var(--accent-copper); text-transform: uppercase; background: rgba(201, 110, 40, 0.08); padding: 3px 10px; border-radius: 12px; border: 1px solid rgba(201,110,40,0.15); display: inline-block; margin-bottom: 10px;">Lomba & Kompetisi</span>
-                    <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-headline); margin-bottom: 12px; line-height: 1.35;">Sayembara Kreator 1001CC (Grand Prize 4 Jt)</h3>
-                    
-                    <div style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; font-size: 0.84rem; color: var(--text-dark);">
-                      <div style="display: flex; align-items: flex-start; gap: 8px;">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-copper)" stroke-width="2" style="margin-top: 2px; flex-shrink: 0;"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
-                        <span>Upload Konten: 15 Juli – 5 Agustus 2026 (Pengumuman 16 Ags)</span>
-                      </div>
-                      <div style="display: flex; align-items: flex-start; gap: 8px;">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-copper)" stroke-width="2" style="margin-top: 2px; flex-shrink: 0;"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-                        <span>Warkop 1001cc & Online (Reels / TikTok)</span>
-                      </div>
-                    </div>
-                    <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.55; margin-bottom: 20px;">
-                      Kompetisi pembuatan video kreatif konten Instagram Reels & TikTok seputar suasana, produk, dan keseruan nongkrong di Warkop 1001cc dengan Grand Prize senilai Rp 4.000.000. Bebas biaya pendaftaran!
-                    </p>
-                  </div>
-                  <button onclick="openReservationModal()" class="btn-primary" style="width: 100%; justify-content: center; font-size: 0.88rem; padding: 12px;">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M13 5v2"/><path d="M13 17v2"/><path d="M13 11v2"/></svg> Ikuti Event Acara
-                  </button>
-                </div>
-              </div>
-
-              <!-- Event 2 -->
-              <div class="event-card" style="background: #FFFFFF; border-radius: 16px; overflow: hidden; border: 1px solid #E5DCD0; box-shadow: 0 10px 30px rgba(28, 19, 13, 0.06); display: flex; flex-direction: column;">
-                <div class="img-zoom-box" style="position: relative; height: 240px; overflow: hidden; background: #25150B;">
-                  <img src="./assets/event_lomba_karaoke.jpg" alt="Lomba Karaoke Batch 2" style="width: 100%; height: 100%; object-fit: cover; object-position: top center;" />
-                  <span style="position: absolute; top: 14px; left: 14px; background: #C96E28; color: #FFFFFF; font-size: 0.75rem; font-weight: 800; padding: 4px 12px; border-radius: 20px; font-family: 'Space Mono', monospace; box-shadow: 0 4px 10px rgba(0,0,0,0.4);">S/D 16 AGUSTUS 2026</span>
-                </div>
-                <div style="padding: 22px; display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
-                  <div>
-                    <span style="font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700; color: var(--accent-copper); text-transform: uppercase; background: rgba(201, 110, 40, 0.08); padding: 3px 10px; border-radius: 12px; border: 1px solid rgba(201,110,40,0.15); display: inline-block; margin-bottom: 10px;">Lomba & Kompetisi</span>
-                    <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-headline); margin-bottom: 12px; line-height: 1.35;">Lomba Karaoke Batch 2 Warkop 1001CC</h3>
-                    
-                    <div style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; font-size: 0.84rem; color: var(--text-dark);">
-                      <div style="display: flex; align-items: flex-start; gap: 8px;">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-copper)" stroke-width="2" style="margin-top: 2px; flex-shrink: 0;"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
-                        <span>Minggu, 16 Agustus 2026 (10.00 - 23.00 WIB)</span>
-                      </div>
-                      <div style="display: flex; align-items: flex-start; gap: 8px;">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-copper)" stroke-width="2" style="margin-top: 2px; flex-shrink: 0;"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-                        <span>Warkop 1001CC Bomang (Tajur Halang)</span>
-                      </div>
-                    </div>
-                    <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.55; margin-bottom: 20px;">
-                      Ajang tunjukkan bakat bernyanyi lagu ceria & penuh semangat untuk Kategori Anak-anak dan Remaja/Dewasa dengan total hadiah uang tunai, voucher makan, dan e-sertifikat.
-                    </p>
-                  </div>
-                  <button onclick="openReservationModal()" class="btn-primary" style="width: 100%; justify-content: center; font-size: 0.88rem; padding: 12px; margin-top: auto;">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M13 5v2"/><path d="M13 17v2"/><path d="M13 11v2"/></svg> Ikuti Event Acara
-                  </button>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 5. Testimonials Section -->
-      <section class="section" id="testimoni-section" style="background: var(--bg-cream); padding: 64px 0 54px;">
-        <div class="wrap">
-          <div class="reveal-init">
-            <div class="section-head">
-              <div class="eyebrow" style="display: inline-flex; align-items: center; gap: 6px;">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent-copper)" style="flex-shrink: 0;"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="var(--accent-copper)" opacity="0.8" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="var(--accent-copper)" opacity="0.65" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="var(--accent-copper)" opacity="0.9" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg> Ulasan Google Maps Resmi
-              </div>
-              <h2>Ulasan Asli Sahabat 1001cc</h2>
-              <p style="max-width: 640px; margin: 10px auto 0;">Testimoni verbatim yang ditulis langsung oleh para pelanggan setia Warkop 1001cc di Google Reviews.</p>
-              
-              <!-- Google Rating Summary Card -->
-              <div class="card-hover" style="display: inline-flex; align-items: center; gap: 16px; background: #FFFFFF; padding: 14px 28px; border-radius: 20px; margin-top: 28px; box-shadow: 0 8px 24px rgba(62, 35, 18, 0.06); border: 1px solid var(--border-card);">
-                <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(201, 110, 40, 0.12); display: flex; align-items: center; justify-content: center;">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--accent-copper)" style="flex-shrink: 0;"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="var(--accent-copper)" opacity="0.8" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="var(--accent-copper)" opacity="0.65" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="var(--accent-copper)" opacity="0.9" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
-                </div>
-                <div style="text-align: left;">
-                  <div style="display: flex; align-items: center; gap: 10px;">
-                    <span style="font-size: 1.5rem; font-family: var(--font-serif); font-weight: 700; color: var(--text-headline); line-height: 1;">4.9</span>
-                    <div style="display: flex; gap: 3px;">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent-copper)" stroke="var(--accent-copper)"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent-copper)" stroke="var(--accent-copper)"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent-copper)" stroke="var(--accent-copper)"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent-copper)" stroke="var(--accent-copper)"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent-copper)" stroke="var(--accent-copper)"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    </div>
-                  </div>
-                  <div style="font-size: 0.82rem; color: var(--text-muted); margin-top: 2px; font-weight: 600;">Ulasan Asli Google Reviews · Warkop 1001cc Naik Kelas</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Testimonials Grid -->
-          <div class="reveal-init" style="transition-delay: 100ms; margin-top: 36px;">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
-              
-              <!-- Review 1 -->
-              <div class="testimonial-card" style="background: #FFFFFF; border-radius: 22px; padding: 30px 26px; border: 1px solid var(--border-card); box-shadow: 0 8px 24px rgba(62, 35, 18, 0.05); display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden;">
-                <div style="position: absolute; top: 10px; right: 20px; font-size: 4.5rem; font-family: var(--font-serif); color: rgba(201, 110, 40, 0.08); line-height: 1; pointer-events: none; user-select: none;">“</div>
-                <div>
-                  <div style="display: flex; gap: 4px; margin-bottom: 12px;">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent-copper)" stroke="var(--accent-copper)"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent-copper)" stroke="var(--accent-copper)"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent-copper)" stroke="var(--accent-copper)"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent-copper)" stroke="var(--accent-copper)"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent-copper)" stroke="var(--accent-copper)"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                  </div>
-                  <h4 style="font-size: 1.12rem; font-weight: 700; margin-bottom: 8px; color: var(--text-headline); line-height: 1.3;">Fasilitas Karaoke Free</h4>
-                  <p style="color: var(--text-dark); font-size: 0.92rem; line-height: 1.6; margin-bottom: 20px; font-style: italic;">
-                    "Seru banget bisa karaokean ga perlu bayar lagi cukup pesen makan aja, harganya juga murah banget cocok buat semua kalangan deh, tempatnya nyaman makanannya juga enak."
-                  </p>
-                </div>
-                <div style="display: flex; align-items: center; gap: 12px; border-top: 1px solid var(--border-light); padding-top: 14px; margin-top: auto;">
-                  <div style="width: 40px; height: 40px; border-radius: 50%; background: #FAF6F0; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.88rem; color: var(--accent-copper); border: 1px solid var(--border-light); flex-shrink: 0;">DA</div>
-                  <div>
-                    <div style="font-weight: 700; font-size: 0.9rem; color: var(--text-headline); display: flex; align-items: center; gap: 6px;">
-                      Deswinavivi Anjani <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                    </div>
-                    <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 1px;">1 ulasan · 5 foto · 10 bulan lalu</div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Review 2 -->
-              <div class="testimonial-card" style="background: #FFFFFF; border-radius: 22px; padding: 30px 26px; border: 1px solid var(--border-card); box-shadow: 0 8px 24px rgba(62, 35, 18, 0.05); display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden;">
-                <div style="position: absolute; top: 10px; right: 20px; font-size: 4.5rem; font-family: var(--font-serif); color: rgba(201, 110, 40, 0.08); line-height: 1; pointer-events: none; user-select: none;">“</div>
-                <div>
-                  <div style="display: flex; gap: 4px; margin-bottom: 12px;">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent-copper)" stroke="var(--accent-copper)"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent-copper)" stroke="var(--accent-copper)"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent-copper)" stroke="var(--accent-copper)"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent-copper)" stroke="var(--accent-copper)"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent-copper)" stroke="var(--accent-copper)"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                  </div>
-                  <h4 style="font-size: 1.12rem; font-weight: 700; margin-bottom: 8px; color: var(--text-headline); line-height: 1.3;">Warkop Rasa Cafe 24 Jam</h4>
-                  <p style="color: var(--text-dark); font-size: 0.92rem; line-height: 1.6; margin-bottom: 20px; font-style: italic;">
-                    "pas bgt buat yg mau nongkrong sampe pagi, bener’ recomend bgt warkop rasa cafe 24 jam ini, rasa makanan dan minuman nya juga ga kalah enak, tempat luas bisa indoor outdoor, udh sering kesini bner’ bikin nagih🥰🥰"
-                  </p>
-                </div>
-                <div style="display: flex; align-items: center; gap: 12px; border-top: 1px solid var(--border-light); padding-top: 14px; margin-top: auto;">
-                  <div style="width: 40px; height: 40px; border-radius: 50%; background: #FAF6F0; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.88rem; color: var(--accent-copper); border: 1px solid var(--border-light); flex-shrink: 0;">AA</div>
-                  <div>
-                    <div style="font-weight: 700; font-size: 0.9rem; color: var(--text-headline); display: flex; align-items: center; gap: 6px;">
-                      Alyssya Anaskia <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                    </div>
-                    <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 1px;">2 ulasan · 1 foto · 3 bulan lalu</div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Review 3 -->
-              <div class="testimonial-card" style="background: #FFFFFF; border-radius: 22px; padding: 30px 26px; border: 1px solid var(--border-card); box-shadow: 0 8px 24px rgba(62, 35, 18, 0.05); display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden;">
-                <div style="position: absolute; top: 10px; right: 20px; font-size: 4.5rem; font-family: var(--font-serif); color: rgba(201, 110, 40, 0.08); line-height: 1; pointer-events: none; user-select: none;">“</div>
-                <div>
-                  <div style="display: flex; gap: 4px; margin-bottom: 12px;">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent-copper)" stroke="var(--accent-copper)"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent-copper)" stroke="var(--accent-copper)"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent-copper)" stroke="var(--accent-copper)"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent-copper)" stroke="var(--accent-copper)"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent-copper)" stroke="var(--accent-copper)"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                  </div>
-                  <h4 style="font-size: 1.12rem; font-weight: 700; margin-bottom: 8px; color: var(--text-headline); line-height: 1.3;">Pelayanan Ramah & Cepat</h4>
-                  <p style="color: var(--text-dark); font-size: 0.92rem; line-height: 1.6; margin-bottom: 20px; font-style: italic;">
-                    "mantap bgt pelayanan nya ramah, cepat dan harganya sangat terjangkau. mba icha, riska dan intan ramah sekali terimakasi ya. gonna be my fav place"
-                  </p>
-                </div>
-                <div style="display: flex; align-items: center; gap: 12px; border-top: 1px solid var(--border-light); padding-top: 14px; margin-top: auto;">
-                  <div style="width: 40px; height: 40px; border-radius: 50%; background: #FAF6F0; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.88rem; color: var(--accent-copper); border: 1px solid var(--border-light); flex-shrink: 0;">QQ</div>
-                  <div>
-                    <div style="font-weight: 700; font-size: 0.9rem; color: var(--text-headline); display: flex; align-items: center; gap: 6px;">
-                      Qintan Qirana <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                    </div>
-                    <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 1px;">8 ulasan · 10 foto · 5 bulan lalu</div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 6. Map & Operational Section (Lokasi & Jam Operasional) -->
-      <section class="section" style="background: var(--bg-cream); padding: 50px 0;">
-        <div class="wrap">
-          <div class="reveal-init">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; align-items: center;">
-              <div>
-                <div class="eyebrow">Lokasi & Jam Operasional</div>
-                <h2 style="font-size: clamp(1.6rem, 3.5vw, 2rem); margin-bottom: 14px; color: var(--text-headline);">Kunjungi Warkop 1001cc</h2>
-                <p style="color: var(--text-muted); line-height: 1.65; margin-bottom: 20px; font-size: 0.95rem;">
-                  Terletak strategis di jalur Bomang (Bojonggede - Kemang), Kalisuren, Tajur Halang. Tempat nongkrong luas, parkir aman, dan tempat yang pas untuk bertemu teman.
-                </p>
-
-                <div style="display: flex; flex-direction: column; gap: 12px; font-size: 0.9rem; color: var(--text-dark);">
-                  <!-- Clickable Address -->
-                  <a href="https://maps.google.com/?q=Warkop+1001cc+Bojonggede+Kemang+Bomang+Kalisuren" target="_blank" rel="noopener noreferrer" class="card-hover" style="display: flex; align-items: center; gap: 12px; color: var(--text-dark); text-decoration: none; font-weight: 600; padding: 12px; border-radius: 12px; background: #FFFFFF; border: 1px solid var(--border-card);">
-                    <div style="width: 36px; height: 36px; border-radius: 10px; background: rgba(201, 110, 40, 0.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-copper)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-                    </div>
-                    <span>Kalisuren, Tajur Halang, Bojonggede - Kemang (Bomang)</span>
-                  </a>
-
-                  <!-- Operational Hours -->
-                  <div class="card-hover" style="display: flex; align-items: center; gap: 12px; font-weight: 600; padding: 12px; border-radius: 12px; background: #FFFFFF; border: 1px solid var(--border-card);">
-                    <div style="width: 36px; height: 36px; border-radius: 10px; background: rgba(201, 110, 40, 0.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-copper)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                    </div>
-                    <span>Buka 24 Jam Non-Stop Setiap Hari (Senin - Minggu)</span>
-                  </div>
-
-                  <!-- Clickable WhatsApp Phone -->
-                  <a href="https://wa.me/6288289277876" target="_blank" rel="noopener noreferrer" class="card-hover" style="display: flex; align-items: center; gap: 12px; color: var(--text-dark); text-decoration: none; font-weight: 600; padding: 12px; border-radius: 12px; background: #FFFFFF; border: 1px solid var(--border-card);">
-                    <div style="width: 36px; height: 36px; border-radius: 10px; background: rgba(201, 110, 40, 0.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-copper)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                    </div>
-                    <span>0882-8927-7876 (WhatsApp Reservasi & Informasi)</span>
-                  </a>
-                </div>
-              </div>
-
-              <!-- Interactive Map Image -->
-              <a href="https://maps.google.com/?q=Warkop+1001cc+Bojonggede+Kemang+Bomang+Kalisuren" target="_blank" rel="noopener noreferrer" class="card-hover" style="display: block; border-radius: 18px; overflow: hidden; border: 1px solid var(--border-card); box-shadow: 0 15px 35px rgba(0,0,0,0.08); text-decoration: none; position: relative;">
-                <img src="./assets/warkop_map.png" alt="Peta Lokasi Warkop 1001cc" style="width: 100%; height: auto; display: block;" />
-                <div style="position: absolute; bottom: 12px; right: 12px; background: rgba(0, 0, 0, 0.75); color: #FFFFFF; padding: 8px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; display: flex; align-items: center; gap: 6px; backdrop-filter: blur(4px);">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg> Buka Peta Petunjuk Arah
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer style="background: #1A0E07; color: #D4A373; padding: 32px 0 24px; border-top: 1px solid rgba(255,255,255,0.08);">
-      <div class="wrap" style="text-align: center; display: flex; flex-direction: column; align-items: center; gap: 14px;">
-        <!-- Top Title -->
-        <div
-          style="font-size: 0.85rem; font-family: var(--font-mono); font-weight: 700; letter-spacing: 0.12em; color: #C96E28; text-transform: uppercase; cursor: default; user-select: none;"
-        >
-          WARKOP 1001CC © 2026
-        </div>
-
-        <!-- Middle Inline Clickable Contacts Row -->
-        <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 12px 20px; font-size: 0.85rem; font-family: var(--font-mono); color: #C96E28;">
-          <!-- Clickable Youtube -->
-          <a href="https://www.youtube.com/@warkop1001cc" target="_blank" rel="noopener noreferrer" style="color: #C96E28; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C96E28" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17z"/><path d="m10 15 5-3-5-3v6z"/></svg> @warkop1001cc
-          </a>
-
-          <!-- Clickable Tiktok -->
-          <a href="https://www.tiktok.com/@warkop1001cc" target="_blank" rel="noopener noreferrer" style="color: #C96E28; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C96E28" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg> @warkop1001cc
-          </a>
-
-          <!-- Clickable Phone / WhatsApp -->
-          <a href="https://wa.me/6288289277876" target="_blank" rel="noopener noreferrer" style="color: #C96E28; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C96E28" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> 0882-8927-7876
-          </a>
-
-          <!-- Clickable Email -->
-          <a href="mailto:warkop1001cc@gmail.com" style="color: #C96E28; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C96E28" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg> warkop1001cc@gmail.com
-          </a>
-
-          <!-- Clickable Instagram -->
-          <a href="https://www.instagram.com/warkop1001cc" target="_blank" rel="noopener noreferrer" style="color: #C96E28; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C96E28" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg> @warkop1001cc
-          </a>
-        </div>
-
-        <!-- Bottom Subtitle Line -->
-        <div style="font-size: 0.7rem; font-family: var(--font-mono); letter-spacing: 0.1em; color: rgba(255,255,255,0.4); text-transform: uppercase; margin-top: 4px;">
-          TEMPAT NONGKRONG · KOPI NUSANTARA · RUANG KOMUNITAS
-        </div>
-      </div>
-    </footer>
-
-    <!-- Contact & Reservation Modal -->
-    <div id="reservation-modal" class="modal-backdrop">
-      <div class="modal-content">
-        <button onclick="closeReservationModal()" class="modal-close" aria-label="Tutup Modal">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg>
-        </button>
-        <div class="modal-header">
-          <h3>Reservasi Tempat</h3>
-          <p>Isi formulir singkat di bawah ini. Detail pesanan Anda akan otomatis diteruskan ke WhatsApp CS Warkop 1001cc.</p>
-        </div>
-        <form onsubmit="handleReservationSubmit(event)" class="modal-form">
-          <div class="form-group">
-            <label for="res-name">Nama Pemesan</label>
-            <input type="text" id="res-name" class="form-input" placeholder="Masukkan nama lengkap Anda" required />
-          </div>
-          <div class="form-group">
-            <label for="res-phone">Nomor WA / HP</label>
-            <input type="tel" id="res-phone" class="form-input" placeholder="Contoh: 08123456789" required />
-          </div>
-          <div class="form-group">
-            <label for="res-date">Hari, Tanggal & Jam Pertemuan</label>
-            <input type="text" id="res-date" class="form-input" placeholder="Contoh: Sabtu, 25 Juli jam 19.00 WIB" required />
-          </div>
-          <div class="form-group">
-            <label for="res-guests">Jumlah Orang</label>
-            <select id="res-guests" class="form-input">
-              <option value="1-2">1 - 2 Orang</option>
-              <option value="3-5">3 - 5 Orang</option>
-              <option value="6-10">6 - 10 Orang (Kelompok)</option>
-              <option value="11-20">11 - 20 Orang (Komunitas)</option>
-              <option value="20+">Lebih dari 20 Orang</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="res-note">Catatan Tambahan (Opsional)</label>
-            <textarea id="res-note" class="form-input" rows="3" placeholder="Contoh: Butuh meja dekat colokan listrik, ruang AC/non-AC, dll."></textarea>
-          </div>
-          <button type="submit" class="btn-submit">Ajukan Reservasi (Buka WhatsApp)</button>
-        </form>
-      </div>
+      <!-- Mobile Hamburger Menu Toggle Button -->
+      <button id="mobile-menu-burger" class="mobile-menu-toggle" aria-label="Buka Menu Navigasi">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="4" x2="20" y1="12" y2="12" />
+          <line x1="4" x2="20" y1="6" y2="6" />
+          <line x1="4" x2="20" y1="18" y2="18" />
+        </svg>
+      </button>
     </div>
 
-    <!-- Core Script -->
-    <script src="script.js"></script>
-  </body>
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-nav-drawer-menu" class="mobile-nav-drawer">
+      <a href="#hero-section" class="mobile-nav-link">
+        <span>Beranda</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" x2="19" y1="12" y2="12" />
+          <polyline points="12 5 19 12 12 19" />
+        </svg>
+      </a>
+      <a href="#about-section" class="mobile-nav-link">
+        <span>Tentang Warkop</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" x2="19" y1="12" y2="12" />
+          <polyline points="12 5 19 12 12 19" />
+        </svg>
+      </a>
+      <a href="#signature-section" class="mobile-nav-link">
+        <span>Menu Signature</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" x2="19" y1="12" y2="12" />
+          <polyline points="12 5 19 12 12 19" />
+        </svg>
+      </a>
+      <a href="#event-section" class="mobile-nav-link">
+        <span>Event & Kegiatan</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" x2="19" y1="12" y2="12" />
+          <polyline points="12 5 19 12 12 19" />
+        </svg>
+      </a>
+      <a href="#testimoni-section" class="mobile-nav-link">
+        <span>Testimoni Google</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" x2="19" y1="12" y2="12" />
+          <polyline points="12 5 19 12 12 19" />
+        </svg>
+      </a>
+      <button onclick="openReservationModal()" class="btn-primary"
+        style="width: 100%; justify-content: center; margin-top: 12px; padding: 12px; text-decoration: none;">
+        Reservasi Tempat WA <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" x2="19" y1="12" y2="12" />
+          <polyline points="12 5 19 12 12 19" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main Content Area -->
+  <main>
+    <!-- 1. Hero Section (Beranda) -->
+    <section class="hero" id="hero-section">
+      <div class="wrap hero-grid">
+        <div class="reveal-init">
+          <div class="eyebrow">Warkop & Ruang Kolaborasi</div>
+          <h1>
+            Tempat Nongkrong Hangat,
+            <br class="hero-br" />
+            <em>Kopi Terbaik Setiap Saat.</em>
+          </h1>
+          <p class="lead">
+            Nikmati kopi nusantara pilihan, makanan favorit, dan suasana nyaman untuk bekerja, berdiskusi, maupun
+            bersantai bersama teman.
+          </p>
+
+          <div class="hero-actions">
+            <button onclick="openReservationModal()" class="btn-primary">
+              Reservasi Tempat <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="btn-icon">
+                <line x1="5" x2="19" y1="12" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </button>
+            <a href="#signature-section" class="btn-ghost">
+              Lihat Menu Khas <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="btn-icon">
+                <line x1="5" x2="19" y1="12" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Polaroid Card -->
+        <div class="reveal-init" style="transition-delay: 150ms;">
+          <div class="hero-photo-wrap">
+            <div class="polaroid-card">
+              <div class="polaroid-img-box">
+                <img src="./assets/beranda_warkop_photo.jpg" alt="Warkop 1001cc photo" class="polaroid-img" />
+              </div>
+              <div class="polaroid-caption">Warkop 1001cc — Buka 24 Jam</div>
+              <div class="polaroid-sub">Bojonggede - Kemang (Bomang), Kalisuren</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section" id="fitur-section">
+      <div class="wrap">
+        <div class="reveal-init">
+          <div class="section-head">
+            <div class="eyebrow">Mengapa Memilih Kami?</div>
+            <h2>Kenyamanan dan Rasa dalam Satu Tempat</h2>
+            <p>Kami merancang ruang dan produk kami agar setiap kunjungan Anda menjadi momen produktif dan menyenangkan.
+            </p>
+          </div>
+        </div>
+
+        <div class="reveal-init" style="transition-delay: 100ms;">
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon-box"
+                style="background: rgba(201,124,62,0.15); color: var(--accent-copper); width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 20h.01" />
+                  <path d="M8.5 16.5a5 5 0 0 1 7 0" />
+                  <path d="M5 13a10 10 0 0 1 14 0" />
+                  <path d="M1.5 9.5a15 15 0 0 1 21 0" />
+                </svg>
+              </div>
+              <h3 style="font-size: 1.25rem; margin-bottom: 10px;">Ruang Kerja Nyaman</h3>
+              <p style="color: var(--text-muted); font-size: 0.92rem;">Dilengkapi Wi-Fi, AC dingin, dan suasana tenang
+                yang cocok untuk bersantai maupun Work From Cafe (WFC).</p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon-box"
+                style="background: rgba(201,124,62,0.15); color: var(--accent-copper); width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
+              </div>
+              <h3 style="font-size: 1.25rem; margin-bottom: 10px;">Buka 24 Jam Non-Stop</h3>
+              <p style="color: var(--text-muted); font-size: 0.92rem;">Siap melayani kebutuhan kopi & camilan hangat
+                Anda kapan pun, baik siang hari maupun larut malam tanpa antrean.</p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon-box"
+                style="background: rgba(201,124,62,0.15); color: var(--accent-copper); width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M10 2v2" />
+                  <path d="M14 2v2" />
+                  <path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h12Z" />
+                  <path d="M6 2v2" />
+                  <path d="M17 12h1a3 3 0 0 1 3 3v1a3 3 0 0 1-3 3h-1" />
+                </svg>
+              </div>
+              <h3 style="font-size: 1.25rem; margin-bottom: 10px;">Signature Kopi Cakra</h3>
+              <p style="color: var(--text-muted); font-size: 0.92rem;">Racikan es kopi susu signature legendaris 1001cc
+                dengan sensasi rasa manis gurih cokelat yang khas dan pekat.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Tentang Warkop Section -->
+    <section class="section" id="about-section">
+      <div class="wrap">
+        <div class="reveal-init">
+          <div class="section-head" style="margin-bottom: 32px;">
+            <h2 style="font-size: clamp(2.2rem, 4vw, 3rem);">Tentang Warkop 1001cc</h2>
+            <p style="max-width: 640px; margin: 10px auto 0;">
+              Rumah bagi setiap cerita — tempat bertemunya kehangatan kopi, inspirasi, dan kebersamaan 24 jam non-stop.
+            </p>
+          </div>
+        </div>
+
+        <!-- About Details Card -->
+        <div class="reveal-init" style="transition-delay: 100ms;">
+          <div class="card-hover"
+            style="background: #FFFFFF; border-radius: 20px; border: 1px solid var(--border-card); box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06); overflow: hidden; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin-bottom: 36px;">
+            <!-- Real photo column -->
+            <div style="position: relative; min-height: clamp(220px, 35vw, 360px);">
+              <img src="./assets/warkop_photo.jpg" alt="Warkop 1001cc"
+                style="width: 100%; height: 100%; min-height: clamp(220px, 35vw, 360px); object-fit: cover; display: block;" />
+              <div
+                style="position: absolute; bottom: 12px; left: 12px; right: 12px; background: rgba(255, 255, 255, 0.94); backdrop-filter: blur(8px); padding: 10px 14px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.6); display: flex; align-items: center; gap: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.12);">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-copper)"
+                  stroke-width="2" style="flex-shrink: 0;">
+                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                <span style="font-size: 0.82rem; font-weight: 700; color: var(--text-dark);">Bojonggede - Kemang
+                  (Bomang), Kalisuren</span>
+              </div>
+            </div>
+
+            <!-- Content column -->
+            <div
+              style="padding: clamp(20px, 4vw, 36px) clamp(18px, 4vw, 32px); display: flex; flex-direction: column; justify-content: center;">
+              <div
+                style="font-size: 0.78rem; font-family: var(--font-mono); font-weight: 700; color: var(--accent-copper); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px;">
+                Berdiri Sejak 20 September 2025
+              </div>
+              <h3
+                style="font-family: var(--font-serif); font-size: clamp(1.4rem, 3vw, 1.8rem); color: var(--text-headline); margin-bottom: 14px; line-height: 1.25;">
+                Sejarah Singkat Warkop 1001cc</h3>
+              <p style="font-size: 0.94rem; color: var(--text-dark); line-height: 1.7; margin-bottom: 14px;">
+                Warkop 1001cc resmi berdiri pada 20 September 2025. Berawal dari kebiasaan tim yang sering berkumpul,
+                berdiskusi, dan menikmati kopi di berbagai kafe, muncul sebuah ide sederhana: mengapa tidak membangun
+                tempat nongkrong sendiri?
+              </p>
+              <p style="font-size: 0.94rem; color: var(--text-dark); line-height: 1.7; margin-bottom: 20px;">
+                Melihat masih terbatasnya tempat yang buka selama 24 jam, lahirlah Warkop 1001cc sebagai warkop yang
+                nyaman, buka 24 jam, dan menjadi tempat berkumpul, bekerja, maupun bersantai kapan saja. Dengan
+                menghadirkan kopi berkualitas dan suasana yang hangat, 1001cc hadir untuk menjadi rumah bagi setiap
+                cerita dan pertemuan.
+              </p>
+
+              <!-- highlights -->
+              <div
+                style="display: flex; gap: 8px; flex-wrap: wrap; padding-top: 16px; border-top: 1px solid var(--border-light);">
+                <span
+                  style="background: var(--bg-cream); padding: 6px 12px; border-radius: 10px; font-size: 0.8rem; font-weight: 700; color: var(--text-dark); display: inline-flex; align-items: center; gap: 6px;">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-copper)"
+                    stroke-width="2">
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" />
+                  </svg> Buka 24 Jam Non-Stop
+                </span>
+                <span
+                  style="background: var(--bg-cream); padding: 6px 12px; border-radius: 10px; font-size: 0.8rem; font-weight: 700; color: var(--text-dark); display: inline-flex; align-items: center; gap: 6px;">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-copper)"
+                    stroke-width="2">
+                    <path d="M12 20h.01" />
+                    <path d="M8.5 16.5a5 5 0 0 1 7 0" />
+                    <path d="M5 13a10 10 0 0 1 14 0" />
+                    <path d="M1.5 9.5a15 15 0 0 1 21 0" />
+                  </svg> Akses Wi-Fi Gratis
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Signature Menu Section -->
+    <section class="section" id="signature-section">
+      <div class="wrap">
+        <div class="reveal-init">
+          <div class="section-head" style="margin-bottom: 36px;">
+            <div class="eyebrow">Menu Signature Kami</div>
+            <h2>Menu Spesial Warkop 1001cc</h2>
+            <p>Rasakan kelezatan kopi racikan barista kami dengan biji kopi pilihan nusantara.</p>
+          </div>
+        </div>
+
+        <!-- Showcase Grid for Signature Menus -->
+        <div class="reveal-init" style="transition-delay: 100ms;">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
+
+            <!-- Kopi Cakra Banner Card -->
+            <div
+              style="background: radial-gradient(ellipse at 50% 50%, #4D2814 0%, #351A0C 55%, #1C0C05 100%); overflow: hidden; padding: 40px 24px; min-height: 480px; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 15px 35px rgba(0,0,0,0.3); border-radius: 20px; position: relative;">
+              <div
+                style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; pointer-events: none; overflow: hidden; z-index: 0;">
+                <div
+                  style="font-family: var(--font-serif); font-size: 8rem; font-weight: 900; color: rgba(255,255,255,0.03); letter-spacing: 0.05em; text-transform: uppercase; user-select: none;">
+                  CAKRA</div>
+              </div>
+              <div
+                style="position: absolute; width: 100%; height: 100%; pointer-events: none; z-index: 2; display: flex; align-items: center; justify-content: center; transform: translateY(-40px);">
+                <img src="./assets/kopi_cakra_glass.png" alt="Kopi Cakra Original"
+                  style="height: 280px; object-fit: contain; filter: drop-shadow(0 15px 25px rgba(0,0,0,0.5));" />
+                <img src="./assets/floating_coffee_beans.png"
+                  style="position: absolute; width: 115px; left: 22%; top: 18%; transform: rotate(15deg); opacity: 0.35;" />
+                <img src="./assets/floating_chocolate.png"
+                  style="position: absolute; width: 140px; right: 18%; top: 35%; transform: rotate(-15deg); opacity: 0.35;" />
+              </div>
+              <div
+                style="z-index: 3; color: #FFFFFF; text-align: center; max-width: 100%; margin-top: auto; padding-top: 220px;">
+                <span
+                  style="font-family: var(--font-mono); font-size: 0.7rem; font-weight: 800; text-transform: uppercase; background: #C96E28; padding: 4px 10px; border-radius: 20px; margin-bottom: 10px; display: inline-block;">Best
+                  Seller #1</span>
+                <h3
+                  style="font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; color: #FFF; margin-bottom: 8px;">
+                  Kopi Cakra Original</h3>
+                <p style="font-size: 0.85rem; line-height: 1.5; color: rgba(255,255,255,0.85);">
+                  Signature coffee andalan 1001cc dengan konsep "Ngopi Sambil Nyoklat." Perpaduan rasa pahit khas kopi
+                  robusta Dampit pilihan dan manis lembut cokelat pekat dalam setiap tegukan.
+                </p>
+              </div>
+            </div>
+
+            <!-- Matcha Cakra Banner Card -->
+            <div
+              style="background: radial-gradient(ellipse at 50% 50%, #25441B 0%, #183011 55%, #0B1907 100%); overflow: hidden; padding: 40px 24px; min-height: 480px; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 15px 35px rgba(0,0,0,0.3); border-radius: 20px; position: relative;">
+              <div
+                style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; pointer-events: none; overflow: hidden; z-index: 0;">
+                <div
+                  style="font-family: var(--font-serif); font-size: 8rem; font-weight: 900; color: rgba(255,255,255,0.03); letter-spacing: 0.05em; text-transform: uppercase; user-select: none;">
+                  MATCHA</div>
+              </div>
+              <div
+                style="position: absolute; width: 100%; height: 100%; pointer-events: none; z-index: 2; display: flex; align-items: center; justify-content: center; transform: translateY(-40px);">
+                <img src="./assets/matcha_cakra_glass.png" alt="Cakra Matcha Latte"
+                  style="height: 280px; object-fit: contain; filter: drop-shadow(0 15px 25px rgba(0,0,0,0.5));" />
+                <img src="./assets/floating_coffee_beans.png"
+                  style="position: absolute; width: 115px; left: 22%; top: 18%; transform: rotate(15deg); opacity: 0.35;" />
+                <img src="./assets/matcha_splash.png"
+                  style="position: absolute; width: 140px; right: 18%; top: 35%; transform: rotate(-15deg); opacity: 0.35;" />
+              </div>
+              <div
+                style="z-index: 3; color: #FFFFFF; text-align: center; max-width: 100%; margin-top: auto; padding-top: 220px;">
+                <span
+                  style="font-family: var(--font-mono); font-size: 0.7rem; font-weight: 800; text-transform: uppercase; background: #558b2f; padding: 4px 10px; border-radius: 20px; margin-bottom: 10px; display: inline-block;">Trending
+                  Inovasi</span>
+                <h3
+                  style="font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; color: #FFF; margin-bottom: 8px;">
+                  Cakra Matcha Latte</h3>
+                <p style="font-size: 0.85rem; line-height: 1.5; color: rgba(255,255,255,0.85);">
+                  Showcase non-coffee premium dari 1001cc. Memadukan keharuman teh hijau matcha jepang asli pilihan
+                  dengan kelembutan susu gurih yang creamy dan segar.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Elegant Description Cards below the Showcase -->
+        <div class="reveal-init" style="transition-delay: 150ms; margin-top: 36px;">
+          <div
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; max-width: 1100px; margin: 30px auto 0;">
+
+            <!-- Kopi Cakra Details Card -->
+            <div
+              style="background: #FFFFFF; border-radius: 20px; border: 1px solid var(--border-card); box-shadow: 0 12px 36px rgba(44, 24, 11, 0.05); padding: 30px 24px; display: flex; flex-direction: column; justify-content: flex-start;">
+              <h3
+                style="font-family: var(--font-serif); font-size: 1.35rem; color: var(--text-headline); margin-bottom: 16px; line-height: 1.3;">
+                Kopi Cakra: Nikmati Sensasi Ngopi Sambil Nyoklat
+              </h3>
+              <div style="color: var(--text-dark); font-size: 0.92rem; line-height: 1.7;">
+                <p style="margin-bottom: 12px;">
+                  Di tengah berkembangnya budaya minum kopi, Kopi Cakra hadir sebagai signature coffee andalan 1001cc
+                  yang menawarkan pengalaman berbeda melalui konsep <strong>"Ngopi Sambil Nyoklat."</strong>
+                </p>
+                <p style="margin-bottom: 12px;">
+                  Bukan sekadar mencampurkan kopi dan cokelat, Kopi Cakra menghadirkan perpaduan rasa yang
+                  harmonis—pahit khas kopi berpadu dengan manis lembut cokelat, menciptakan cita rasa yang kaya,
+                  seimbang, dan berkarakter dalam setiap tegukan.
+                </p>
+                <p>
+                  Keunikan Kopi Cakra terletak pada kemampuannya menghadirkan dua kenikmatan dalam satu cangkir.
+                </p>
+              </div>
+            </div>
+
+            <!-- Matcha Cakra Details Card -->
+            <div
+              style="background: #FFFFFF; border-radius: 20px; border: 1px solid var(--border-card); box-shadow: 0 12px 36px rgba(44, 24, 11, 0.05); padding: 30px 24px; display: flex; flex-direction: column; justify-content: flex-start;">
+              <h3
+                style="font-family: var(--font-serif); font-size: 1.35rem; color: var(--text-headline); margin-bottom: 16px; line-height: 1.3;">
+                Cakra Matcha Latte: Nikmati Kesegaran Matcha dalam Setiap Tegukan
+              </h3>
+              <div style="color: var(--text-dark); font-size: 0.92rem; line-height: 1.7;">
+                <p style="margin-bottom: 12px;">
+                  Cakra Matcha Latte merupakan signature non-coffee dari 1001cc yang memadukan matcha berkualitas dengan
+                  susu creamy untuk menghasilkan rasa yang lembut, segar, dan nikmat.
+                </p>
+                <p>
+                  Memadukan keharuman teh hijau matcha jepang asli pilihan dengan kelembutan susu gurih yang creamy dan
+                  segar untuk menyemangati hari Anda.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Events Section -->
+    <section class="section" id="event-section">
+      <div class="wrap">
+        <div class="reveal-init">
+          <div style="margin-bottom: 28px;">
+            <div class="eyebrow">Agenda & Komunitas</div>
+            <h2 style="font-size: clamp(2.2rem, 4vw, 3rem); margin-bottom: 12px;">Event & Kegiatan Seru di <em>Warkop
+                1001cc</em></h2>
+            <p class="lead" style="max-width: 640px;">
+              Dari lomba kreatif, karaoke gembira, live music akustik, hingga workshop edukasi — intip dokumentasi event
+              seru dan agenda mendatang kami.
+            </p>
+          </div>
+        </div>
+
+        <!-- Events Grid -->
+        <div class="reveal-init" style="transition-delay: 100ms;">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+
+            <!-- Event 1 -->
+            <div class="event-card"
+              style="background: #FFFFFF; border-radius: 16px; overflow: hidden; border: 1px solid #E5DCD0; box-shadow: 0 10px 30px rgba(28, 19, 13, 0.06); display: flex; flex-direction: column;">
+              <div class="img-zoom-box"
+                style="position: relative; height: 240px; overflow: hidden; background: #25150B;">
+                <img src="./assets/event_sayembara_kreator.jpg" alt="Sayembara Kreator 1001CC"
+                  style="width: 100%; height: 100%; object-fit: cover; object-position: top center;" />
+                <span
+                  style="position: absolute; top: 14px; left: 14px; background: #C96E28; color: #FFFFFF; font-size: 0.75rem; font-weight: 800; padding: 4px 12px; border-radius: 20px; font-family: 'Space Mono', monospace; box-shadow: 0 4px 10px rgba(0,0,0,0.4);">S/D
+                  5 AGUSTUS 2026</span>
+              </div>
+              <div
+                style="padding: 22px; display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div>
+                  <span
+                    style="font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700; color: var(--accent-copper); text-transform: uppercase; background: rgba(201, 110, 40, 0.08); padding: 3px 10px; border-radius: 12px; border: 1px solid rgba(201,110,40,0.15); display: inline-block; margin-bottom: 10px;">Lomba
+                    & Kompetisi</span>
+                  <h3
+                    style="font-size: 1.15rem; font-weight: 700; color: var(--text-headline); margin-bottom: 12px; line-height: 1.35;">
+                    Sayembara Kreator 1001CC (Grand Prize 4 Jt)</h3>
+
+                  <div
+                    style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; font-size: 0.84rem; color: var(--text-dark);">
+                    <div style="display: flex; align-items: flex-start; gap: 8px;">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-copper)"
+                        stroke-width="2" style="margin-top: 2px; flex-shrink: 0;">
+                        <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                        <line x1="16" x2="16" y1="2" y2="6" />
+                        <line x1="8" x2="8" y1="2" y2="6" />
+                        <line x1="3" x2="21" y1="10" y2="10" />
+                      </svg>
+                      <span>Upload Konten: 15 Juli – 5 Agustus 2026 (Pengumuman 16 Ags)</span>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; gap: 8px;">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-copper)"
+                        stroke-width="2" style="margin-top: 2px; flex-shrink: 0;">
+                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                        <circle cx="12" cy="10" r="3" />
+                      </svg>
+                      <span>Warkop 1001cc & Online (Reels / TikTok)</span>
+                    </div>
+                  </div>
+                  <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.55; margin-bottom: 20px;">
+                    Kompetisi pembuatan video kreatif konten Instagram Reels & TikTok seputar suasana, produk, dan
+                    keseruan nongkrong di Warkop 1001cc dengan Grand Prize senilai Rp 4.000.000. Bebas biaya
+                    pendaftaran!
+                  </p>
+                </div>
+                <button onclick="openReservationModal()" class="btn-primary"
+                  style="width: 100%; justify-content: center; font-size: 0.88rem; padding: 12px;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z" />
+                    <path d="M13 5v2" />
+                    <path d="M13 17v2" />
+                    <path d="M13 11v2" />
+                  </svg> Ikuti Event Acara
+                </button>
+              </div>
+            </div>
+
+            <!-- Event 2 -->
+            <div class="event-card"
+              style="background: #FFFFFF; border-radius: 16px; overflow: hidden; border: 1px solid #E5DCD0; box-shadow: 0 10px 30px rgba(28, 19, 13, 0.06); display: flex; flex-direction: column;">
+              <div class="img-zoom-box"
+                style="position: relative; height: 240px; overflow: hidden; background: #25150B;">
+                <img src="./assets/event_lomba_karaoke.jpg" alt="Lomba Karaoke Batch 2"
+                  style="width: 100%; height: 100%; object-fit: cover; object-position: top center;" />
+                <span
+                  style="position: absolute; top: 14px; left: 14px; background: #C96E28; color: #FFFFFF; font-size: 0.75rem; font-weight: 800; padding: 4px 12px; border-radius: 20px; font-family: 'Space Mono', monospace; box-shadow: 0 4px 10px rgba(0,0,0,0.4);">S/D
+                  16 AGUSTUS 2026</span>
+              </div>
+              <div
+                style="padding: 22px; display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div>
+                  <span
+                    style="font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700; color: var(--accent-copper); text-transform: uppercase; background: rgba(201, 110, 40, 0.08); padding: 3px 10px; border-radius: 12px; border: 1px solid rgba(201,110,40,0.15); display: inline-block; margin-bottom: 10px;">Lomba
+                    & Kompetisi</span>
+                  <h3
+                    style="font-size: 1.15rem; font-weight: 700; color: var(--text-headline); margin-bottom: 12px; line-height: 1.35;">
+                    Lomba Karaoke Batch 2 Warkop 1001CC</h3>
+
+                  <div
+                    style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; font-size: 0.84rem; color: var(--text-dark);">
+                    <div style="display: flex; align-items: flex-start; gap: 8px;">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-copper)"
+                        stroke-width="2" style="margin-top: 2px; flex-shrink: 0;">
+                        <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                        <line x1="16" x2="16" y1="2" y2="6" />
+                        <line x1="8" x2="8" y1="2" y2="6" />
+                        <line x1="3" x2="21" y1="10" y2="10" />
+                      </svg>
+                      <span>Minggu, 16 Agustus 2026 (10.00 - 23.00 WIB)</span>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; gap: 8px;">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-copper)"
+                        stroke-width="2" style="margin-top: 2px; flex-shrink: 0;">
+                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                        <circle cx="12" cy="10" r="3" />
+                      </svg>
+                      <span>Warkop 1001CC Bomang (Tajur Halang)</span>
+                    </div>
+                  </div>
+                  <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.55; margin-bottom: 20px;">
+                    Ajang tunjukkan bakat bernyanyi lagu ceria & penuh semangat untuk Kategori Anak-anak dan
+                    Remaja/Dewasa dengan total hadiah uang tunai, voucher makan, dan e-sertifikat.
+                  </p>
+                </div>
+                <button onclick="openReservationModal()" class="btn-primary"
+                  style="width: 100%; justify-content: center; font-size: 0.88rem; padding: 12px; margin-top: auto;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z" />
+                    <path d="M13 5v2" />
+                    <path d="M13 17v2" />
+                    <path d="M13 11v2" />
+                  </svg> Ikuti Event Acara
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Testimonials Section -->
+    <section class="section" id="testimoni-section" style="background: var(--bg-cream); padding: 64px 0 54px;">
+      <div class="wrap">
+        <div class="reveal-init">
+          <div class="section-head">
+            <div class="eyebrow" style="display: inline-flex; align-items: center; gap: 6px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent-copper)" style="flex-shrink: 0;">
+                <path
+                  d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                <path fill="var(--accent-copper)" opacity="0.8"
+                  d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                <path fill="var(--accent-copper)" opacity="0.65"
+                  d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" />
+                <path fill="var(--accent-copper)" opacity="0.9"
+                  d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" />
+              </svg> Ulasan Google Maps Resmi
+            </div>
+            <h2>Ulasan Asli Sahabat 1001cc</h2>
+            <p style="max-width: 640px; margin: 10px auto 0;">Testimoni verbatim yang ditulis langsung oleh para
+              pelanggan setia Warkop 1001cc di Google Reviews.</p>
+
+            <!-- Google Rating Summary Card -->
+            <div class="card-hover"
+              style="display: inline-flex; align-items: center; gap: 16px; background: #FFFFFF; padding: 14px 28px; border-radius: 20px; margin-top: 28px; box-shadow: 0 8px 24px rgba(62, 35, 18, 0.06); border: 1px solid var(--border-card);">
+              <div
+                style="width: 44px; height: 44px; border-radius: 12px; background: rgba(201, 110, 40, 0.12); display: flex; align-items: center; justify-content: center;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--accent-copper)" style="flex-shrink: 0;">
+                  <path
+                    d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                  <path fill="var(--accent-copper)" opacity="0.8"
+                    d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                  <path fill="var(--accent-copper)" opacity="0.65"
+                    d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" />
+                  <path fill="var(--accent-copper)" opacity="0.9"
+                    d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" />
+                </svg>
+              </div>
+              <div style="text-align: left;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                  <span
+                    style="font-size: 1.5rem; font-family: var(--font-serif); font-weight: 700; color: var(--text-headline); line-height: 1;">4.9</span>
+                  <div style="display: flex; gap: 3px;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent-copper)"
+                      stroke="var(--accent-copper)">
+                      <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                    </svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent-copper)"
+                      stroke="var(--accent-copper)">
+                      <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                    </svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent-copper)"
+                      stroke="var(--accent-copper)">
+                      <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                    </svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent-copper)"
+                      stroke="var(--accent-copper)">
+                      <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                    </svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent-copper)"
+                      stroke="var(--accent-copper)">
+                      <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                    </svg>
+                  </div>
+                </div>
+                <div style="font-size: 0.82rem; color: var(--text-muted); margin-top: 2px; font-weight: 600;">Ulasan
+                  Asli Google Reviews · Warkop 1001cc Naik Kelas</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonials Grid -->
+        <div class="reveal-init" style="transition-delay: 100ms; margin-top: 36px;">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+
+            <!-- Review 1 -->
+            <div class="testimonial-card"
+              style="background: #FFFFFF; border-radius: 22px; padding: 30px 26px; border: 1px solid var(--border-card); box-shadow: 0 8px 24px rgba(62, 35, 18, 0.05); display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden;">
+              <div
+                style="position: absolute; top: 10px; right: 20px; font-size: 4.5rem; font-family: var(--font-serif); color: rgba(201, 110, 40, 0.08); line-height: 1; pointer-events: none; user-select: none;">
+                “</div>
+              <div>
+                <div style="display: flex; gap: 4px; margin-bottom: 12px;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent-copper)"
+                    stroke="var(--accent-copper)">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent-copper)"
+                    stroke="var(--accent-copper)">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent-copper)"
+                    stroke="var(--accent-copper)">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent-copper)"
+                    stroke="var(--accent-copper)">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent-copper)"
+                    stroke="var(--accent-copper)">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                </div>
+                <h4
+                  style="font-size: 1.12rem; font-weight: 700; margin-bottom: 8px; color: var(--text-headline); line-height: 1.3;">
+                  Fasilitas Karaoke Free</h4>
+                <p
+                  style="color: var(--text-dark); font-size: 0.92rem; line-height: 1.6; margin-bottom: 20px; font-style: italic;">
+                  "Seru banget bisa karaokean ga perlu bayar lagi cukup pesen makan aja, harganya juga murah banget
+                  cocok buat semua kalangan deh, tempatnya nyaman makanannya juga enak."
+                </p>
+              </div>
+              <div
+                style="display: flex; align-items: center; gap: 12px; border-top: 1px solid var(--border-light); padding-top: 14px; margin-top: auto;">
+                <div
+                  style="width: 40px; height: 40px; border-radius: 50%; background: #FAF6F0; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.88rem; color: var(--accent-copper); border: 1px solid var(--border-light); flex-shrink: 0;">
+                  DA</div>
+                <div>
+                  <div
+                    style="font-weight: 700; font-size: 0.9rem; color: var(--text-headline); display: flex; align-items: center; gap: 6px;">
+                    Deswinavivi Anjani <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22C55E"
+                      stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                      <polyline points="22 4 12 14.01 9 11.01" />
+                    </svg>
+                  </div>
+                  <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 1px;">1 ulasan · 5 foto · 10
+                    bulan lalu</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="testimonial-card"
+              style="background: #FFFFFF; border-radius: 22px; padding: 30px 26px; border: 1px solid var(--border-card); box-shadow: 0 8px 24px rgba(62, 35, 18, 0.05); display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden;">
+              <div
+                style="position: absolute; top: 10px; right: 20px; font-size: 4.5rem; font-family: var(--font-serif); color: rgba(201, 110, 40, 0.08); line-height: 1; pointer-events: none; user-select: none;">
+                “</div>
+              <div>
+                <div style="display: flex; gap: 4px; margin-bottom: 12px;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent-copper)"
+                    stroke="var(--accent-copper)">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent-copper)"
+                    stroke="var(--accent-copper)">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent-copper)"
+                    stroke="var(--accent-copper)">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent-copper)"
+                    stroke="var(--accent-copper)">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent-copper)"
+                    stroke="var(--accent-copper)">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                </div>
+                <h4
+                  style="font-size: 1.12rem; font-weight: 700; margin-bottom: 8px; color: var(--text-headline); line-height: 1.3;">
+                  Warkop Rasa Cafe 24 Jam</h4>
+                <p
+                  style="color: var(--text-dark); font-size: 0.92rem; line-height: 1.6; margin-bottom: 20px; font-style: italic;">
+                  "pas bgt buat yg mau nongkrong sampe pagi, bener’ recomend bgt warkop rasa cafe 24 jam ini, rasa
+                  makanan dan minuman nya juga ga kalah enak, tempat luas bisa indoor outdoor, udh sering kesini bner’
+                  bikin nagih🥰🥰"
+                </p>
+              </div>
+              <div
+                style="display: flex; align-items: center; gap: 12px; border-top: 1px solid var(--border-light); padding-top: 14px; margin-top: auto;">
+                <div
+                  style="width: 40px; height: 40px; border-radius: 50%; background: #FAF6F0; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.88rem; color: var(--accent-copper); border: 1px solid var(--border-light); flex-shrink: 0;">
+                  AA</div>
+                <div>
+                  <div
+                    style="font-weight: 700; font-size: 0.9rem; color: var(--text-headline); display: flex; align-items: center; gap: 6px;">
+                    Alyssya Anaskia <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22C55E"
+                      stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                      <polyline points="22 4 12 14.01 9 11.01" />
+                    </svg>
+                  </div>
+                  <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 1px;">2 ulasan · 1 foto · 3
+                    bulan lalu</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="testimonial-card"
+              style="background: #FFFFFF; border-radius: 22px; padding: 30px 26px; border: 1px solid var(--border-card); box-shadow: 0 8px 24px rgba(62, 35, 18, 0.05); display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden;">
+              <div
+                style="position: absolute; top: 10px; right: 20px; font-size: 4.5rem; font-family: var(--font-serif); color: rgba(201, 110, 40, 0.08); line-height: 1; pointer-events: none; user-select: none;">
+                “</div>
+              <div>
+                <div style="display: flex; gap: 4px; margin-bottom: 12px;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent-copper)"
+                    stroke="var(--accent-copper)">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent-copper)"
+                    stroke="var(--accent-copper)">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent-copper)"
+                    stroke="var(--accent-copper)">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent-copper)"
+                    stroke="var(--accent-copper)">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent-copper)"
+                    stroke="var(--accent-copper)">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                </div>
+                <h4
+                  style="font-size: 1.12rem; font-weight: 700; margin-bottom: 8px; color: var(--text-headline); line-height: 1.3;">
+                  Pelayanan Ramah & Cepat</h4>
+                <p
+                  style="color: var(--text-dark); font-size: 0.92rem; line-height: 1.6; margin-bottom: 20px; font-style: italic;">
+                  "mantap bgt pelayanan nya ramah, cepat dan harganya sangat terjangkau. mba icha, riska dan intan ramah
+                  sekali terimakasi ya. gonna be my fav place"
+                </p>
+              </div>
+              <div
+                style="display: flex; align-items: center; gap: 12px; border-top: 1px solid var(--border-light); padding-top: 14px; margin-top: auto;">
+                <div
+                  style="width: 40px; height: 40px; border-radius: 50%; background: #FAF6F0; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.88rem; color: var(--accent-copper); border: 1px solid var(--border-light); flex-shrink: 0;">
+                  QQ</div>
+                <div>
+                  <div
+                    style="font-weight: 700; font-size: 0.9rem; color: var(--text-headline); display: flex; align-items: center; gap: 6px;">
+                    Qintan Qirana <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22C55E"
+                      stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                      <polyline points="22 4 12 14.01 9 11.01" />
+                    </svg>
+                  </div>
+                  <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 1px;">8 ulasan · 10 foto · 5
+                    bulan lalu</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Map & Operational Section (Lokasi & Jam Operasional) -->
+    <section class="section" style="background: var(--bg-cream); padding: 50px 0;">
+      <div class="wrap">
+        <div class="reveal-init">
+          <div
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; align-items: center;">
+            <div>
+              <div class="eyebrow">Lokasi & Jam Operasional</div>
+              <h2 style="font-size: clamp(1.6rem, 3.5vw, 2rem); margin-bottom: 14px; color: var(--text-headline);">
+                Kunjungi Warkop 1001cc</h2>
+              <p style="color: var(--text-muted); line-height: 1.65; margin-bottom: 20px; font-size: 0.95rem;">
+                Terletak strategis di jalur Bomang (Bojonggede - Kemang), Kalisuren, Tajur Halang. Tempat nongkrong
+                luas, parkir aman, dan tempat yang pas untuk bertemu teman.
+              </p>
+
+              <div
+                style="display: flex; flex-direction: column; gap: 12px; font-size: 0.9rem; color: var(--text-dark);">
+                <!-- Clickable Address -->
+                <a href="https://maps.google.com/?q=Warkop+1001cc+Bojonggede+Kemang+Bomang+Kalisuren" target="_blank"
+                  rel="noopener noreferrer" class="card-hover"
+                  style="display: flex; align-items: center; gap: 12px; color: var(--text-dark); text-decoration: none; font-weight: 600; padding: 12px; border-radius: 12px; background: #FFFFFF; border: 1px solid var(--border-card);">
+                  <div
+                    style="width: 36px; height: 36px; border-radius: 10px; background: rgba(201, 110, 40, 0.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-copper)"
+                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                      <circle cx="12" cy="10" r="3" />
+                    </svg>
+                  </div>
+                  <span>Kalisuren, Tajur Halang, Bojonggede - Kemang (Bomang)</span>
+                </a>
+
+                <!-- Operational Hours -->
+                <div class="card-hover"
+                  style="display: flex; align-items: center; gap: 12px; font-weight: 600; padding: 12px; border-radius: 12px; background: #FFFFFF; border: 1px solid var(--border-card);">
+                  <div
+                    style="width: 36px; height: 36px; border-radius: 10px; background: rgba(201, 110, 40, 0.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-copper)"
+                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10" />
+                      <polyline points="12 6 12 12 16 14" />
+                    </svg>
+                  </div>
+                  <span>Buka 24 Jam Non-Stop Setiap Hari (Senin - Minggu)</span>
+                </div>
+
+                <!-- Clickable WhatsApp Phone -->
+                <a href="https://wa.me/6288289277876" target="_blank" rel="noopener noreferrer" class="card-hover"
+                  style="display: flex; align-items: center; gap: 12px; color: var(--text-dark); text-decoration: none; font-weight: 600; padding: 12px; border-radius: 12px; background: #FFFFFF; border: 1px solid var(--border-card);">
+                  <div
+                    style="width: 36px; height: 36px; border-radius: 10px; background: rgba(201, 110, 40, 0.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-copper)"
+                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path
+                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                    </svg>
+                  </div>
+                  <span>0882-8927-7876 (WhatsApp Reservasi & Informasi)</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Interactive Map Image -->
+            <a href="https://maps.google.com/?q=Warkop+1001cc+Bojonggede+Kemang+Bomang+Kalisuren" target="_blank"
+              rel="noopener noreferrer" class="card-hover"
+              style="display: block; border-radius: 18px; overflow: hidden; border: 1px solid var(--border-card); box-shadow: 0 15px 35px rgba(0,0,0,0.08); text-decoration: none; position: relative;">
+              <img src="./assets/warkop_map.png" alt="Peta Lokasi Warkop 1001cc"
+                style="width: 100%; height: auto; display: block;" />
+              <div
+                style="position: absolute; bottom: 12px; right: 12px; background: rgba(0, 0, 0, 0.75); color: #FFFFFF; padding: 8px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; display: flex; align-items: center; gap: 6px; backdrop-filter: blur(4px);">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M15 3h6v6" />
+                  <path d="M10 14 21 3" />
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                </svg> Buka Peta Petunjuk Arah
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer
+    style="background: #1A0E07; color: #D4A373; padding: 32px 0 24px; border-top: 1px solid rgba(255,255,255,0.08);">
+    <div class="wrap"
+      style="text-align: center; display: flex; flex-direction: column; align-items: center; gap: 14px;">
+      <!-- Top Title -->
+      <div
+        style="font-size: 0.85rem; font-family: var(--font-mono); font-weight: 700; letter-spacing: 0.12em; color: #C96E28; text-transform: uppercase; cursor: default; user-select: none;">
+        WARKOP 1001CC © 2026
+      </div>
+
+      <!-- Middle Inline Clickable Contacts Row -->
+      <div
+        style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 12px 20px; font-size: 0.85rem; font-family: var(--font-mono); color: #C96E28;">
+        <!-- Clickable Youtube -->
+        <a href="https://www.youtube.com/@warkop1001cc" target="_blank" rel="noopener noreferrer"
+          style="color: #C96E28; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C96E28" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;">
+            <path
+              d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17z" />
+            <path d="m10 15 5-3-5-3v6z" />
+          </svg> @warkop1001cc
+        </a>
+
+        <!-- Clickable Tiktok -->
+        <a href="https://www.tiktok.com/@warkop1001cc" target="_blank" rel="noopener noreferrer"
+          style="color: #C96E28; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C96E28" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;">
+            <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+          </svg> @warkop1001cc
+        </a>
+
+        <!-- Clickable Phone / WhatsApp -->
+        <a href="https://wa.me/6288289277876" target="_blank" rel="noopener noreferrer"
+          style="color: #C96E28; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C96E28" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+          </svg> 0882-8927-7876
+        </a>
+
+        <!-- Clickable Email -->
+        <a href="mailto:warkop1001cc@gmail.com"
+          style="color: #C96E28; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C96E28" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;">
+            <rect width="20" height="16" x="2" y="4" rx="2" />
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+          </svg> warkop1001cc@gmail.com
+        </a>
+
+        <!-- Clickable Instagram -->
+        <a href="https://www.instagram.com/warkop1001cc" target="_blank" rel="noopener noreferrer"
+          style="color: #C96E28; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C96E28" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+          </svg> @warkop1001cc
+        </a>
+      </div>
+
+      <!-- Bottom Subtitle Line -->
+      <div
+        style="font-size: 0.7rem; font-family: var(--font-mono); letter-spacing: 0.1em; color: rgba(255,255,255,0.4); text-transform: uppercase; margin-top: 4px;">
+        TEMPAT NONGKRONG · KOPI NUSANTARA · RUANG KOMUNITAS
+      </div>
+    </div>
+  </footer>
+
+  <!-- Contact & Reservation Modal -->
+  <div id="reservation-modal" class="modal-backdrop">
+    <div class="modal-content">
+      <button onclick="closeReservationModal()" class="modal-close" aria-label="Tutup Modal">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x">
+          <line x1="18" x2="6" y1="6" y2="18" />
+          <line x1="6" x2="18" y1="6" y2="18" />
+        </svg>
+      </button>
+      <div class="modal-header">
+        <h3>Reservasi Tempat</h3>
+        <p>Isi formulir singkat di bawah ini. Detail pesanan Anda akan otomatis diteruskan ke WhatsApp CS Warkop 1001cc.
+        </p>
+      </div>
+      <form onsubmit="handleReservationSubmit(event)" class="modal-form">
+        <div class="form-group">
+          <label for="res-name">Nama Pemesan</label>
+          <input type="text" id="res-name" class="form-input" placeholder="Masukkan nama lengkap Anda" required />
+        </div>
+        <div class="form-group">
+          <label for="res-phone">Nomor WA / HP</label>
+          <input type="tel" id="res-phone" class="form-input" placeholder="Contoh: 08123456789" required />
+        </div>
+        <div class="form-group">
+          <label for="res-date">Hari, Tanggal & Jam Pertemuan</label>
+          <input type="text" id="res-date" class="form-input" placeholder="Contoh: Sabtu, 25 Juli jam 19.00 WIB"
+            required />
+        </div>
+        <div class="form-group">
+          <label for="res-guests">Jumlah Orang</label>
+          <select id="res-guests" class="form-input">
+            <option value="1-2">1 - 2 Orang</option>
+            <option value="3-5">3 - 5 Orang</option>
+            <option value="6-10">6 - 10 Orang (Kelompok)</option>
+            <option value="11-20">11 - 20 Orang (Komunitas)</option>
+            <option value="20+">Lebih dari 20 Orang</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="res-note">Catatan Tambahan (Opsional)</label>
+          <textarea id="res-note" class="form-input" rows="3"
+            placeholder="Contoh: Butuh meja dekat colokan listrik, ruang AC/non-AC, dll."></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Ajukan Reservasi (Buka WhatsApp)</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Core Script -->
+  <script src="script.js"></script>
+</body>
+
 </html>

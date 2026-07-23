@@ -234,7 +234,7 @@ export default function App() {
           </div>
 
           {/* Mobile Hamburger Menu Toggle Button */}
-          <button 
+          <button
             className="mobile-menu-toggle"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Buka Menu Navigasi"
@@ -382,7 +382,7 @@ export default function App() {
                         <Wifi size={24} />
                       </div>
                       <h3 style={{ fontSize: '1.25rem', marginBottom: '10px' }}>Ruang Kerja Nyaman</h3>
-                      <p style={{ color: 'var(--text-muted)', fontSize: '0.92rem' }}>Dilengkapi Wi-Fi kencang, colokan listrik melimpah di setiap meja, AC dingin, dan suasana tenang yang cocok untuk Work From Cafe (WFC).</p>
+                      <p style={{ color: 'var(--text-muted)', fontSize: '0.92rem' }}>Dilengkapi Wi-Fi, colokan listrik melimpah di setiap meja, AC dingin, dan suasana tenang yang cocok untuk Work From Cafe (WFC).</p>
                     </div>
 
                     <div className="feature-card">
